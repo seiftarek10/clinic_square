@@ -40,6 +40,21 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
+    flavorDimensions += "default"
+
+    productFlavors {
+        create("dev") {
+            dimension = "default"
+            resValue(type = "string", name = "app_name", value = "clinic dev")
+            applicationIdSuffix = ".free"
+        }
+        create("prod") {
+            dimension = "default"
+            resValue(type = "string", name = "app_name", value = "clinic prod")
+            applicationIdSuffix = ".prod"
+        }
+    }
+
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
         applicationId "com.example.clinic_square"
