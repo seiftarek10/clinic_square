@@ -1,7 +1,9 @@
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
-import 'package:clinic_square/Core/Widgets/app_text_field.dart';
+
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/sign_up_header_text.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/signup_form.dart';
 import 'package:flutter/material.dart';
+
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpPatinet extends StatelessWidget {
@@ -12,30 +14,17 @@ class SignUpPatinet extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             body: AppPadding(
-      child: Column(
-        children: [
-          const SignUpHeaderText(header: 'As Patient'),
-          SizedBox(height: 12.h),
-          AppTextField(
-            hintText: 'Email',
-            icon: Icons.email,
-            controller: TextEditingController(),
-            validator: (value) {
-              return "";
-            },
-          ),
-          AppTextField(
-            hintText: "Password",
-            icon: Icons.lock,
-            suffixIcon: Icons.visibility,
-            onPressed: () {},
-            controller: TextEditingController(),
-            validator: (value) {
-              return "";
-            },
-          )
-        ],
+      child: SingleChildScrollView(
+        child: Column(
+          children: [
+            const SignUpHeaderText(header: 'As Patient'),
+            SizedBox(height: 12.h),
+            const SignupForm()
+          ],
+        ),
       ),
     )));
   }
 }
+
+
