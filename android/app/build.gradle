@@ -40,24 +40,10 @@ android {
         main.java.srcDirs += 'src/main/kotlin'
     }
 
-    flavorDimensions += "default"
-
-    productFlavors {
-        create("dev") {
-            dimension = "default"
-            resValue(type = "string", name = "app_name", value = "clinic dev")
-            applicationIdSuffix = ".free"
-        }
-        create("prod") {
-            dimension = "default"
-            resValue(type = "string", name = "app_name", value = "clinic prod")
-            applicationIdSuffix = ".prod"
-        }
-    }
 
     defaultConfig {
         // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
-        applicationId "com.example.clinic_square"
+        applicationId "com.example.clinic_square.dev"
         // You can update the following values to match your application needs.
         // For more information, see: https://docs.flutter.dev/deployment/android#reviewing-the-gradle-build-configuration.
         minSdkVersion flutter.minSdkVersion
@@ -65,6 +51,21 @@ android {
         versionCode flutterVersionCode.toInteger()
         versionName flutterVersionName
     }
+
+    
+   flavorDimensions += "default"
+
+    productFlavors {
+    create("dev") {
+        dimension = "default"
+        resValue("string", "app_name", "clinic.dev")
+        applicationIdSuffix = ".dev"
+    }
+    create("prod") {
+        dimension = "default"
+        resValue("string", "app_name", "clinic.prod")
+    }
+}
 
     buildTypes {
         release {
