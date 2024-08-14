@@ -14,7 +14,7 @@ class SignUpHeaderText extends StatelessWidget {
         Text(header,
             style:
                 Fonts.font40_700mainBlue.copyWith(color: AppColors.mainBlue)),
-        SizedBox(height: 8.h),
+        SizedBox(height: 4.h),
         Text(
           'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
           style: Fonts.font14_300DarkBlue,
