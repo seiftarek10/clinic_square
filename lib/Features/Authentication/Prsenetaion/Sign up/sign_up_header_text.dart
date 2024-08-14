@@ -3,15 +3,15 @@ import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignUpAsText extends StatelessWidget {
-  const SignUpAsText({super.key});
-
+class SignUpHeaderText extends StatelessWidget {
+  const SignUpHeaderText({super.key, required this.header});
+  final String header;
   @override
   Widget build(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text("Sing Up As",
+        Text(header,
             style:
                 Fonts.font40_700mainBlue.copyWith(color: AppColors.mainBlue)),
         SizedBox(height: 8.h),
