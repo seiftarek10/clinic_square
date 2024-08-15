@@ -6,14 +6,14 @@
         "request": "launch",
         "type": "dart",
         "program": "lib/main_development.dart",
-        "args": ["--flavor", "dev", "--target", "lib/main_dev.dart" ]
+        "args": ["--flavor", "dev", "--target", "lib/main_development.dart" ]
       },
       {
         "name": "prod",
         "request": "launch",
         "type": "dart",
         "program": "lib/main_production.dart",
-        "args": ["--flavor", "prod", "--target", "lib/main_prod.dart" ]
+        "args": ["--flavor", "prod", "--target", "lib/main_production.dart" ]
       }
     ],
     "compounds": []

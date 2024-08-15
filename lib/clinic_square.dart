@@ -12,6 +12,7 @@ class ClinicSquare extends StatelessWidget {
       splitScreenMode: true,
       builder: (_, child) {
         return MaterialApp.router(
+          debugShowCheckedModeBanner: false,
           routerConfig: appRouter,
         );
       },
