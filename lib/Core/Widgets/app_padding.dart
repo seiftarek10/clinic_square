@@ -9,7 +9,7 @@ class AppPadding extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: EdgeInsets.fromLTRB(8.w.w, 50.h, 8.w,0),
+      padding: EdgeInsets.symmetric(horizontal: 16.w),
       child: child,
     );
   }

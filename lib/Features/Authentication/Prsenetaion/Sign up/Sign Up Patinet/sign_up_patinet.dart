@@ -19,6 +19,7 @@ class SignUpPatinet extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
+            SizedBox(height: 40.h),
             const SignUpHeaderText(header: 'As Patient'),
             SizedBox(height: 12.h),
             const SignupForm(),

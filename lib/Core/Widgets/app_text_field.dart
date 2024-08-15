@@ -10,7 +10,8 @@ class AppTextField extends StatefulWidget {
       required this.icon,
       this.suffixIcon,
       required this.controller,
-      required this.validator, this.onPressed});
+      required this.validator,
+      this.onPressed, this.isSecureText});
 
   final String hintText;
   final IconData icon;
@@ -18,6 +19,7 @@ class AppTextField extends StatefulWidget {
   final TextEditingController controller;
   final String Function(String?) validator;
   final void Function()? onPressed;
+  final bool? isSecureText;
 
   @override
   State<AppTextField> createState() => _AppTextFieldState();
@@ -55,6 +57,7 @@ class _AppTextFieldState extends State<AppTextField> {
         controller: widget.controller,
         validator: widget.validator,
         focusNode: _focusNode,
+        obscureText: widget.isSecureText??false,
         decoration: InputDecoration(
             hintText: widget.hintText,
             hintStyle: Fonts.font18_250Lightgrey,
@@ -64,10 +67,8 @@ class _AppTextFieldState extends State<AppTextField> {
             ),
             suffixIcon: IconButton(
               onPressed: widget.onPressed,
-              icon: Icon(
-                widget.suffixIcon,
-                color: isFocused ? AppColors.mainBlue : AppColors.lightGrey),
-             
+              icon: Icon(widget.suffixIcon,
+                  color: isFocused ? AppColors.mainBlue : AppColors.lightGrey),
             ),
             enabledBorder: borderStyle(color: AppColors.lightGrey, width: 0.7),
             focusedBorder: borderStyle(width: 1.5, color: AppColors.mainBlue),

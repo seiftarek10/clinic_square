@@ -16,6 +16,7 @@ class SignUpAs extends StatelessWidget {
           child: AppPadding(
             child: Column(
               children: [
+                SizedBox(height: 40.h),
                 const SignUpHeaderText(
                   header: 'Sing Up As',
                 ),
