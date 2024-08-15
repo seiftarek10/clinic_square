@@ -7,17 +7,14 @@ import 'package:go_router/go_router.dart';
 // GoRouter configuration
 final appRouter = GoRouter(
   routes: [
+    GoRoute(path: '/', builder: (context, state) => const SignUpAs()),
     GoRoute(
-      path: '/',
-      builder: (context, state) => const SignUpAs()
+      path: Routes.signUpPatient,
+      builder: (context, state) => const SignUpPatinet(),
     ),
     GoRoute(
-      path: Paths.signUpPatient,
-      builder: (context, state) => const SignUpPatinet(),
-      ),
-    GoRoute(
-      path: Paths.signUpDoctor,
+      path: Routes.signUpDoctor,
       builder: (context, state) => const SignUpDoctor(),
-      )
+    )
   ],
 );

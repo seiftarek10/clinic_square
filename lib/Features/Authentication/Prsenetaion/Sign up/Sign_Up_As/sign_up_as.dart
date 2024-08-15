@@ -1,3 +1,4 @@
+import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/Sign_Up_As/all_roles._list.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/sign_up_header_text.dart';
@@ -16,7 +17,7 @@ class SignUpAs extends StatelessWidget {
           child: AppPadding(
             child: Column(
               children: [
-                SizedBox(height: 40.h),
+                Space.topSpace,
                 const SignUpHeaderText(
                   header: 'Sing Up As',
                 ),
@@ -24,9 +25,7 @@ class SignUpAs extends StatelessWidget {
                   height: 30.h,
                 ),
                 const AllRolesList(),
-                SizedBox(
-                  height: 12.h,
-                ),
+                Space.verticalSpace12,
                 const AlreadyHaveAccountText(),
               ],
             ),
