@@ -1,11 +1,10 @@
+import 'package:clinic_square/Core/Helpers/space.dart';
+import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/polices_conditions_text.dart';
-
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/sign_up_header_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/signup_form.dart';
 import 'package:flutter/material.dart';
-
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignUpPatinet extends StatelessWidget {
   const SignUpPatinet({super.key});
@@ -18,13 +17,15 @@ class SignUpPatinet extends StatelessWidget {
       child: SingleChildScrollView(
         child: Column(
           children: [
-            SizedBox(height: 40.h),
+            Space.topSpace,
             const SignUpHeaderText(header: 'As Patient'),
-            SizedBox(height: 12.h),
+            Space.verticalSpace12,
             const SignupForm(),
-            SizedBox(height: 12.h),
+            Space.verticalSpace18,
+            AppButton(onPressed: () {}),
+            Space.verticalSpace12,
             const PolicesAndContions(),
-            SizedBox(height: 6.h)
+            Space.bottomSpace
           ],
         ),
       ),
