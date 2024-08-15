@@ -1,5 +1,8 @@
+import 'package:clinic_square/Core/Ui_Helpers/form_conditions.dart';
+import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_text_field.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({
@@ -28,7 +31,7 @@ class _SignupFormState extends State<SignupForm> {
             icon: Icons.person,
             controller: TextEditingController(),
             validator: (value) {
-              return "";
+              return FormConditions.nullOrEmptyValidation(value,"Name");
             },
           ),
           AppTextField(
@@ -94,6 +97,15 @@ class _SignupFormState extends State<SignupForm> {
             controller: TextEditingController(),
             validator: (value) {
               return "";
+            },
+          ),
+          SizedBox(height: 18.h),
+          AppButton(
+            onPressed: () {
+              if (_formKey.currentState!.validate()) {
+              } else {
+                print('UnValid');
+              }
             },
           ),
         ],

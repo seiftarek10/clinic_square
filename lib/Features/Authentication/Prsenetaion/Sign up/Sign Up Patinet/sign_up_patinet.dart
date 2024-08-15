@@ -1,4 +1,3 @@
-import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/polices_conditions_text.dart';
 
@@ -23,10 +22,6 @@ class SignUpPatinet extends StatelessWidget {
             const SignUpHeaderText(header: 'As Patient'),
             SizedBox(height: 12.h),
             const SignupForm(),
-            SizedBox(height: 18.h),
-             AppButton(
-              onPressed: (){},
-            ),
             SizedBox(height: 12.h),
             const PolicesAndContions(),
             SizedBox(height: 6.h)

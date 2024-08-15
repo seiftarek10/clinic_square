@@ -50,30 +50,34 @@ class _AppTextFieldState extends State<AppTextField> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      height: 65,
-      margin: EdgeInsets.only(bottom: 16.h),
-      child: TextFormField(
-        controller: widget.controller,
-        validator: widget.validator,
-        focusNode: _focusNode,
-        obscureText: widget.isSecureText??false,
-        decoration: InputDecoration(
-            hintText: widget.hintText,
-            hintStyle: Fonts.font18_250Lightgrey,
-            prefixIcon: Icon(
-              widget.icon,
-              color: isFocused ? AppColors.mainBlue : AppColors.lightGrey,
-            ),
-            suffixIcon: IconButton(
-              onPressed: widget.onPressed,
-              icon: Icon(widget.suffixIcon,
-                  color: isFocused ? AppColors.mainBlue : AppColors.lightGrey),
-            ),
-            enabledBorder: borderStyle(color: AppColors.lightGrey, width: 0.7),
-            focusedBorder: borderStyle(width: 1.5, color: AppColors.mainBlue),
-            errorBorder: borderStyle(width: 1.5, color: Colors.red)),
-      ),
+    return Column(
+      children: [
+        TextFormField(
+          controller: widget.controller,
+          validator: widget.validator,
+          focusNode: _focusNode,
+          obscureText: widget.isSecureText??false,
+          decoration: InputDecoration(
+              hintText: widget.hintText,
+              hintStyle: Fonts.font18_250Lightgrey,
+              prefixIcon: Icon(
+                widget.icon,
+                color: isFocused ? AppColors.mainBlue : AppColors.lightGrey,
+              ),
+              suffixIcon: IconButton(
+                onPressed: widget.onPressed,
+                icon: Icon(widget.suffixIcon,
+                    color: isFocused ? AppColors.mainBlue : AppColors.lightGrey),
+              ),
+              enabledBorder: borderStyle(color: AppColors.lightGrey, width: 0.7),
+              focusedBorder: borderStyle(width: 1.5, color: AppColors.mainBlue),
+              errorBorder: borderStyle(width: 1.5, color: Colors.red),
+              focusedErrorBorder: borderStyle(width: 1.5, color: Colors.red)
+              ),
+        ),
+          SizedBox(height: 10.h),
+
+      ],
     );
   }
 
