@@ -15,14 +15,16 @@ class AllRolesList extends StatelessWidget {
       children: [
         RoleContainer(
           onTap: () {
-            GoRouter.of(context).push(Paths.signUpPatient);
+            GoRouter.of(context).push(Routes.signUpPatient);
           },
           role: 'Patient',
           width: 6.w,
           icon: FontAwesomeIcons.userLarge,
         ),
         RoleContainer(
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(Routes.signUpDoctor);
+          },
           role: 'Doctor',
           width: 6.w,
           icon: FontAwesomeIcons.userDoctor,
