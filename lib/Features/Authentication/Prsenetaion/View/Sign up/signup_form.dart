@@ -4,8 +4,10 @@ import 'package:flutter/material.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({
-    super.key,
+    super.key, this.isLab,
   });
+
+   final bool? isLab;
 
   @override
   State<SignupForm> createState() => _SignupFormState();
@@ -29,7 +31,7 @@ class _SignupFormState extends State<SignupForm> {
             icon: Icons.person,
             controller: TextEditingController(),
             validator: (value) {
-              return FormConditions.nullOrEmptyValidation(value,"Name");
+              return FormConditions.nullOrEmptyValidation(value, "Name");
             },
           ),
           AppTextField(
@@ -73,6 +75,8 @@ class _SignupFormState extends State<SignupForm> {
               return "";
             },
           ),
+          widget.isLab!=null?
+          const SizedBox.shrink():
           AppTextField(
             hintText: 'Age',
             icon: Icons.calendar_month,
@@ -97,7 +101,6 @@ class _SignupFormState extends State<SignupForm> {
               return "";
             },
           ),
-          
         ],
       ),
     );
