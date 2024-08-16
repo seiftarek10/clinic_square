@@ -1,6 +1,7 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
+import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/already_have_account.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/polices_conditions_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_header_text.dart';
@@ -15,7 +16,7 @@ class SignUpPatinet extends StatelessWidget {
     return SafeArea(
         child: Scaffold(
             body: AppPadding(
-      child: SingleChildScrollView(
+      child: AppScrollWidget(
         child: Column(
           children: [
             Space.topSpace,
