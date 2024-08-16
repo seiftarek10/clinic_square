@@ -5,10 +5,11 @@ import 'package:flutter/material.dart';
 class SignupForm extends StatefulWidget {
   const SignupForm({
     super.key,
-    required this.showAgeField,
+    required this.showAgeField, this.location,
   });
 
   final bool showAgeField;
+  final String? location;
 
   @override
   State<SignupForm> createState() => _SignupFormState();
@@ -95,7 +96,7 @@ class _SignupFormState extends State<SignupForm> {
             },
           ),
           AppTextField(
-            hintText: "City",
+            hintText: widget.location?? "City",
             icon: Icons.location_on_sharp,
             controller: TextEditingController(),
             validator: (value) {

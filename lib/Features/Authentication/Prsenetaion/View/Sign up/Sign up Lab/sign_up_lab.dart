@@ -22,7 +22,10 @@ class SignupLab extends StatelessWidget {
               Space.topSpace,
               const SignUpHeaderText(header: 'As Laboratory'),
               Space.verticalSpace12,
-              const SignupForm(showAgeField: false),
+              const SignupForm(
+                showAgeField: false,
+                location: 'Location',
+                ),
               Space.verticalSpace12,
               const AttachFiled(),
               Space.verticalSpace12,
