@@ -1,7 +1,7 @@
 import 'package:clinic_square/Core/Helpers/extensions.dart';
 import 'package:clinic_square/Core/Helpers/regex.dart';
 
-abstract class FormConditions {
+abstract class ValidationForm {
   static String validEmail(String? email) {
     if (email.isNullOrEmpty() || Regex.isEmailValid(email!)) {
       return 'Enter Valid Email';
@@ -38,7 +38,7 @@ abstract class FormConditions {
     }
   }
 
-  static String nullOrEmptyValidation(String? value,String label) {
+  static String nullOrEmptyValidation(String? value, String label) {
     if (value.isNullOrEmpty()) {
       return "Enter Valid $label";
     } else {

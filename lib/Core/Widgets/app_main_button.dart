@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppButton extends StatelessWidget {
-  const AppButton({super.key, required this.onPressed});
+  const AppButton({super.key, required this.onPressed, required this.text});
   final void Function() onPressed;
+  final String text;
   @override
   Widget build(BuildContext context) {
     return ElevatedButton(
-      onPressed:onPressed,
+      onPressed: onPressed,
       style: ElevatedButton.styleFrom(
         shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
         padding:
@@ -17,7 +18,7 @@ class AppButton extends StatelessWidget {
         backgroundColor: AppColors.mainBlue,
       ),
       child: Text(
-        "Sign Up",
+        text,
         style: Fonts.font16_600White,
       ),
     );
