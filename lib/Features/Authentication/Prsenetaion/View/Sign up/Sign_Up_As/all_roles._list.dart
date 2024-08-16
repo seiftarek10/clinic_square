@@ -37,7 +37,9 @@ class AllRolesList extends StatelessWidget {
             width: 25.w,
             icon: FontAwesomeIcons.flaskVial),
         RoleContainer(
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(Routes.signUpPharmacy);
+          },
           role: 'Pharmacy',
           width: 6.w,
           icon: FontAwesomeIcons.mortarPestle,

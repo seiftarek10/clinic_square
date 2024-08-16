@@ -9,8 +9,8 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/signup_form.dart';
 import 'package:flutter/material.dart';
 
-class SignupLab extends StatelessWidget {
-  const SignupLab({super.key});
+class SignUpPharmacy extends StatelessWidget {
+  const SignUpPharmacy({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -21,21 +21,20 @@ class SignupLab extends StatelessWidget {
               child: Column(
             children: [
               Space.topSpace,
-              const SignUpHeaderText(header: 'As Laboratory'),
+              const SignUpHeaderText(header: 'As Pharmacy'),
               Space.verticalSpace12,
               const SignupForm(
                 showAgeField: false,
                 location: 'Location',
-                ),
-              Space.verticalSpace12,
-              const AttachFiled(),
-              Space.verticalSpace12,
-              AppButton(onPressed: () {}),
-              Space.verticalSpace18,
-              const PolicesAndContions(),
-              Space.verticalSpace18,
-              const AlreadyHaveAccountText(),
-              Space.verticalSpace12
+              ), Space.verticalSpace12,
+                const AttachFiled(),
+                Space.verticalSpace12,
+                AppButton(onPressed: () {}),
+                Space.verticalSpace18,
+                const PolicesAndContions(),
+                Space.verticalSpace18,
+                const AlreadyHaveAccountText(),
+                Space.verticalSpace12
             ],
           )),
         ),

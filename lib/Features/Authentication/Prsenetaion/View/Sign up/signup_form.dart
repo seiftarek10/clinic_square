@@ -4,10 +4,12 @@ import 'package:flutter/material.dart';
 
 class SignupForm extends StatefulWidget {
   const SignupForm({
-    super.key, this.isLab,
+    super.key,
+    required this.showAgeField, this.location,
   });
 
-   final bool? isLab;
+  final bool showAgeField;
+  final String? location;
 
   @override
   State<SignupForm> createState() => _SignupFormState();
@@ -75,16 +77,16 @@ class _SignupFormState extends State<SignupForm> {
               return "";
             },
           ),
-          widget.isLab!=null?
-          const SizedBox.shrink():
-          AppTextField(
-            hintText: 'Age',
-            icon: Icons.calendar_month,
-            controller: TextEditingController(),
-            validator: (value) {
-              return "";
-            },
-          ),
+          widget.showAgeField == false
+              ? const SizedBox.shrink()
+              : AppTextField(
+                  hintText: 'Age',
+                  icon: Icons.calendar_month,
+                  controller: TextEditingController(),
+                  validator: (value) {
+                    return "";
+                  },
+                ),
           AppTextField(
             hintText: 'Mobile',
             icon: Icons.phone_android_rounded,
@@ -94,7 +96,7 @@ class _SignupFormState extends State<SignupForm> {
             },
           ),
           AppTextField(
-            hintText: "City",
+            hintText: widget.location?? "City",
             icon: Icons.location_on_sharp,
             controller: TextEditingController(),
             validator: (value) {
