@@ -7,7 +7,7 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/sign_in_form.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/sign_in_header_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/polices_conditions_text.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/View/divider.dart';
+import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
 
