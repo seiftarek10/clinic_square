@@ -5,7 +5,8 @@ import 'package:flutter/material.dart';
 class SignupForm extends StatefulWidget {
   const SignupForm({
     super.key,
-    required this.showAgeField, this.location,
+    required this.showAgeField,
+    this.location,
   });
 
   final bool showAgeField;
@@ -33,7 +34,7 @@ class _SignupFormState extends State<SignupForm> {
             icon: Icons.person,
             controller: TextEditingController(),
             validator: (value) {
-              return FormConditions.nullOrEmptyValidation(value, "Name");
+              return FormValidation.nullOrEmptyValidation(value, "Name");
             },
           ),
           AppTextField(
@@ -96,7 +97,7 @@ class _SignupFormState extends State<SignupForm> {
             },
           ),
           AppTextField(
-            hintText: widget.location?? "City",
+            hintText: widget.location ?? "City",
             icon: Icons.location_on_sharp,
             controller: TextEditingController(),
             validator: (value) {
