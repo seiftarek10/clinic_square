@@ -23,10 +23,14 @@ abstract class Fonts {
       fontSize: 16.sp, fontWeight: FontWeight.w600, color: Colors.white);
   static TextStyle font16_400DarkBlue = GoogleFonts.inter(
       fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.darkBlue);
+  static TextStyle font16_400mainBlue = GoogleFonts.inter(
+      fontSize: 16.sp, fontWeight: FontWeight.w400, color: AppColors.mainBlue);
   static TextStyle font20_700darkBlue = GoogleFonts.inter(
       fontSize: 20.sp, fontWeight: FontWeight.w700, color: AppColors.darkBlue);
   static TextStyle font20_700mainBlue = GoogleFonts.inter(
       fontSize: 20.sp, fontWeight: FontWeight.w700, color: AppColors.mainBlue);
     static TextStyle font24_600mainBlue = GoogleFonts.inter(
       fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppColors.mainBlue);
+     static TextStyle font15_500mainBlue = GoogleFonts.inter(
+      fontSize: 15.sp, fontWeight: FontWeight.w500, color: AppColors.mainBlue);
 }

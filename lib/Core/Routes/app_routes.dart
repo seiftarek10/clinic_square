@@ -1,4 +1,5 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/sign_in.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Sign%20Up%20Doctor/sign_up_doctor.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Sign%20Up%20Patinet/sign_up_patinet.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Sign%20up%20Lab/sign_up_lab.dart';
@@ -10,6 +11,7 @@ import 'package:go_router/go_router.dart';
 final appRouter = GoRouter(
   routes: [
     GoRoute(path: '/', builder: (context, state) => const SignUpAs()),
+    GoRoute(path: Routes.singUpAs, builder: (context, state) => const SignUpAs()),
     GoRoute(
         path: Routes.signUpPatient,
         builder: (context, state) => const SignUpPatinet()),
@@ -20,6 +22,7 @@ final appRouter = GoRouter(
         path: Routes.signUpLab, builder: (context, state) => const SignupLab()),
     GoRoute(
         path: Routes.signUpPharmacy,
-        builder: (context, state) => const SignUpPharmacy())
+        builder: (context, state) => const SignUpPharmacy()),
+    GoRoute(path: Routes.signin, builder: (context, state) => const SignIn())
   ],
 );

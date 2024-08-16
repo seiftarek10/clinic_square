@@ -6,6 +6,7 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/polices_conditions_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_header_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/signup_form.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/divider.dart';
 import 'package:flutter/material.dart';
 
 class SignUpPatinet extends StatelessWidget {
@@ -26,17 +27,15 @@ class SignUpPatinet extends StatelessWidget {
               showAgeField: true,
             ),
             Space.verticalSpace18,
-            AppButton(onPressed: () {}),
+            AppButton(text: 'Sign Up', onPressed: () {}),
+            const AppDivider(),
+            const PolicesAndContions(),
             Space.verticalSpace18,
-              const PolicesAndContions(),
-              Space.verticalSpace18,
-              const AlreadyHaveAccountText(),
-              Space.verticalSpace12
+            const AlreadyHaveAccountText(),
+            Space.verticalSpace12
           ],
         ),
       ),
     )));
   }
 }
-
-
