@@ -1,5 +1,5 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/Sign%20up/Sign_Up_As/role_container.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Sign_Up_As/role_container.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -30,12 +30,16 @@ class AllRolesList extends StatelessWidget {
           icon: FontAwesomeIcons.userDoctor,
         ),
         RoleContainer(
-            onTap: () {},
+            onTap: () {
+              GoRouter.of(context).push(Routes.signUpLab);
+            },
             role: 'Lab',
             width: 25.w,
             icon: FontAwesomeIcons.flaskVial),
         RoleContainer(
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(Routes.signUpPharmacy);
+          },
           role: 'Pharmacy',
           width: 6.w,
           icon: FontAwesomeIcons.mortarPestle,
