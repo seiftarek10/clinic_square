@@ -12,12 +12,15 @@ class AppBottomBar extends StatefulWidget {
 class _AppBottomBarState extends State<AppBottomBar> {
   int _selectedIndex = 0;
 
-  static const List<Widget> _pages = <Widget>[
-    HomePage(),
-    Text(
-      'Index 1: Business',
+  static  final List<Widget> _pages =  <Widget>[
+    const HomePage(),
+    const Center(
+    child: Text("Center"),
     ),
-    Text(
+    const Text(
+      'Index 2: School',
+    ),
+     const Text(
       'Index 2: School',
     ),
   ];
@@ -33,22 +36,32 @@ class _AppBottomBarState extends State<AppBottomBar> {
     return Scaffold(
       body: _pages.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.fixed, 
+        elevation: 16,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
-            icon: Icon(Icons.home),
+            icon: Icon(Icons.home_filled),
             label: 'Home',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.business),
-            label: 'Business',
+            icon: Icon(Icons.message),
+            label: 'Forum',
           ),
           BottomNavigationBarItem(
-            icon: Icon(Icons.school),
-            label: 'School',
+            icon: Icon(Icons.volunteer_activism),
+            label: 'Activity',
+          ),
+             BottomNavigationBarItem(
+            icon: Icon(Icons.person),
+            label: 'Profile',
           ),
         ],
         currentIndex: _selectedIndex,
         selectedItemColor: AppColors.mainBlue,
+        selectedFontSize: 18,
+        selectedIconTheme: const IconThemeData(
+          size: 35
+        ),
         onTap: _onItemTapped,
       ),
     );
