@@ -1,4 +1,4 @@
-import 'package:clinic_square/Core/Ui_Helpers/form_conditions.dart';
+import 'package:clinic_square/Core/Helpers/validation_form.dart';
 import 'package:clinic_square/Core/Widgets/app_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -34,7 +34,7 @@ class _SignupFormState extends State<SignupForm> {
             icon: Icons.person,
             controller: TextEditingController(),
             validator: (value) {
-              return FormValidation.nullOrEmptyValidation(value, "Name");
+              return ValidationForm.nullOrEmptyValidation(value, "Name");
             },
           ),
           AppTextField(

@@ -29,7 +29,10 @@ class SignUpDoctor extends StatelessWidget {
               Space.verticalSpace12,
               const AttachFiled(),
               Space.verticalSpace18,
-              AppButton(onPressed: () {}),
+              AppButton(
+                  text: 'Sign Up',
+                
+                onPressed: () {}),
              Space.verticalSpace18,
               const PolicesAndContions(),
               Space.verticalSpace18,

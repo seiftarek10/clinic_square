@@ -26,7 +26,10 @@ class SignUpPatinet extends StatelessWidget {
               showAgeField: true,
             ),
             Space.verticalSpace18,
-            AppButton(onPressed: () {}),
+            AppButton(
+                  text: 'Sign Up',
+              
+              onPressed: () {}),
             Space.verticalSpace18,
               const PolicesAndContions(),
               Space.verticalSpace18,

@@ -1,4 +1,4 @@
-import 'package:clinic_square/Core/Ui_Helpers/form_conditions.dart';
+import 'package:clinic_square/Core/Helpers/validation_form.dart';
 import 'package:clinic_square/Core/Widgets/app_text_field.dart';
 import 'package:flutter/material.dart';
 
@@ -23,7 +23,7 @@ class _SignInFormState extends State<SignInForm> {
               icon: Icons.email,
               controller: TextEditingController(),
               validator: (value) {
-                return FormValidation.nullOrEmptyValidation(value, 'Email');
+                return ValidationForm.nullOrEmptyValidation(value, 'Email');
               }),
           AppTextField(
             hintText: 'Password',

@@ -29,4 +29,6 @@ abstract class Fonts {
       fontSize: 20.sp, fontWeight: FontWeight.w700, color: AppColors.mainBlue);
     static TextStyle font24_600mainBlue = GoogleFonts.inter(
       fontSize: 24.sp, fontWeight: FontWeight.w600, color: AppColors.mainBlue);
+     static TextStyle font15_500mainBlue = GoogleFonts.inter(
+      fontSize: 15.sp, fontWeight: FontWeight.w500, color: AppColors.mainBlue);
 }
