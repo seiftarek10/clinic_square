@@ -2,6 +2,7 @@ import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/attach_filed.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/already_have_account.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/polices_conditions_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_header_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/signup_form.dart';
@@ -26,9 +27,11 @@ class SignupLab extends StatelessWidget {
               const AttachFiled(),
               Space.verticalSpace12,
               AppButton(onPressed: (){}),
-              Space.verticalSpace12,
+              Space.verticalSpace18,
               const PolicesAndContions(),
-              Space.bottomSpace
+              Space.verticalSpace18,
+              const AlreadyHaveAccountText(),
+              Space.verticalSpace12
               
             ],
           )),
