@@ -1,5 +1,4 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
-import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
@@ -20,7 +19,7 @@ class AlreadyHaveAccountText extends StatelessWidget {
           TextSpan(
               text: 'Sign In',
               style:
-                  Fonts.font16_400DarkBlue.copyWith(color: AppColors.mainBlue),
+                  Fonts.font16_400mainBlue,
               recognizer: TapGestureRecognizer()
                 ..onTap = () {
                   GoRouter.of(context).push(Routes.signin);
