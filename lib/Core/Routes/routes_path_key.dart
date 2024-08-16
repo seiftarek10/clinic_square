@@ -5,4 +5,6 @@ abstract class Routes {
   static const String signUpLab = '/signupLab';
   static const String signUpPharmacy = '/signupPharmacy';
   static const String signin = '/signin';
+  static const String bottomBar = '/bottomBar';
+  static const String home = '/home';
 }
