@@ -7,6 +7,7 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/polices_conditions_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_header_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/signup_form.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/divider.dart';
 import 'package:flutter/material.dart';
 
 class SignupLab extends StatelessWidget {
@@ -31,7 +32,8 @@ class SignupLab extends StatelessWidget {
               const AttachFiled(),
               Space.verticalSpace12,
               AppButton(text: 'Sign Up', onPressed: () {}),
-              Space.verticalSpace18,
+                const AppDivider(),
+            
               const PolicesAndContions(),
               Space.verticalSpace18,
               const AlreadyHaveAccountText(),
