@@ -2,29 +2,23 @@ import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:flutter/material.dart';
 
-
-
 class AppBottomBar extends StatefulWidget {
   const AppBottomBar({super.key});
 
   @override
-  State<AppBottomBar> createState() =>
-      _AppBottomBarState();
+  State<AppBottomBar> createState() => _AppBottomBarState();
 }
 
-class _AppBottomBarState
-    extends State<AppBottomBar> {
+class _AppBottomBarState extends State<AppBottomBar> {
   int _selectedIndex = 0;
 
   static const List<Widget> _pages = <Widget>[
-  HomePage(),
+    HomePage(),
     Text(
       'Index 1: Business',
-      
     ),
     Text(
       'Index 2: School',
-     
     ),
   ];
 
