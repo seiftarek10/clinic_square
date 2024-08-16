@@ -21,7 +21,9 @@ class SignUpPatinet extends StatelessWidget {
             Space.topSpace,
             const SignUpHeaderText(header: 'As Patient'),
             Space.verticalSpace12,
-            const SignupForm(),
+            const SignupForm(
+              showAgeField: true,
+            ),
             Space.verticalSpace18,
             AppButton(onPressed: () {}),
             Space.verticalSpace18,

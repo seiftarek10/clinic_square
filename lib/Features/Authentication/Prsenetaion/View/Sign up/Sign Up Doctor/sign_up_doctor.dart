@@ -22,7 +22,9 @@ class SignUpDoctor extends StatelessWidget {
               Space.topSpace,
               const SignUpHeaderText(header: 'As Doctor'),
               Space.verticalSpace12,
-              const SignupForm(),
+              const SignupForm(
+                showAgeField: true,
+              ),
               Space.verticalSpace12,
               const AttachFiled(),
               Space.verticalSpace18,
