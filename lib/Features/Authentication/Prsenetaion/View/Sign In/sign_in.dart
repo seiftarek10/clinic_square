@@ -2,11 +2,11 @@ import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/forget_passwrod_text.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/no_account_text.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/sign_in_form.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/sign_in_header_text.dart';
-import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/polices_conditions_text.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/forget_passwrod_text.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/no_account_text.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/sign_in_form.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/sign_in_header_text.dart';
+import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Widgets/polices_conditions_text.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
