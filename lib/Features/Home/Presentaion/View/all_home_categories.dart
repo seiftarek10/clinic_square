@@ -1,3 +1,4 @@
+import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home_category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -13,31 +14,29 @@ class AllHomeGategroies extends StatelessWidget {
       direction: Axis.horizontal,
       children: const [
         HomeCategory(
+          categoryIcon: Assets.doctorConulation,
           category: 'Consultaion',
-          imageFlex: 2,
-          textFlex: 1,
         ),
         HomeCategory(
+          categoryIcon: Assets.lab,
           category: 'Lab',
-          imageFlex: 2,
-          textFlex: 1,
         ),
         HomeCategory(
+          categoryIcon: Assets.pharmacy,
           category: 'Pharmacy',
-          imageFlex: 2,
-          textFlex: 1,
         ),
         HomeCategory(
+          categoryIcon: Assets.homeVisit,
           category: 'Home Visit',
-          imageFlex: 2,
-          textFlex: 1,
         ),
         HomeCategory(
+          categoryIcon: Assets.bmiCalculator,
           category: 'Bmi Calculator',
           imageFlex: 6,
           textFlex: 5,
         ),
         HomeCategory(
+          categoryIcon: Assets.medicalQuestion,
           category: 'Medical Quesitions',
           imageFlex: 6,
           textFlex: 5,

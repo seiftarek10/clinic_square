@@ -4,24 +4,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeCategory extends StatelessWidget {
-  const HomeCategory({super.key, required this.category, required this.imageFlex, required this.textFlex});
+  const HomeCategory({super.key, required this.category,  this.imageFlex,  this.textFlex, required this.categoryIcon});
 
-  final String category;
-  final int imageFlex, textFlex;
+  final String category,categoryIcon;
+  final int? imageFlex, textFlex;
 
   @override
   Widget build(BuildContext context) {
     return Container(
       width: 102.w,
-      height: 100.h,
+      height: 120.h,
       decoration: BoxDecoration(
           color: AppColors.appBackgroundGrey,
           borderRadius: BorderRadius.circular(15)),
       child: Column(
         children: [
-          Expanded(flex: imageFlex, child: Icon(Icons.percent)),
+         SizedBox(height: 5.h),
           Expanded(
-              flex: textFlex,
+            flex: imageFlex??2,
+            child:Image.asset(
+              categoryIcon,
+              fit: BoxFit.cover
+          )),
+         SizedBox(height: 10.h),
+          Expanded(
+              flex: textFlex??1,
               child: Text(
                 category,
                 textAlign: TextAlign.center,

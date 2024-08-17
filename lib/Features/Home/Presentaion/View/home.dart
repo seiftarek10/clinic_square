@@ -18,7 +18,7 @@ class HomePage extends StatelessWidget {
             children: [
               Space.topSpace,
               const HomeHeaderText(),
-              Space.verticalSpace50,
+              Space.verticalSpace24,
               const AllHomeGategroies()
               
               ],
