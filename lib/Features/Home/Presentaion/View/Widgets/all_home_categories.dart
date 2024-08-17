@@ -9,7 +9,7 @@ class AllHomeGategroies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      runSpacing: 10.w,
+      runSpacing: 20.w,
       spacing: 10.h,
       direction: Axis.horizontal,
       children: const [
@@ -45,3 +45,4 @@ class AllHomeGategroies extends StatelessWidget {
     );
   }
 }
+

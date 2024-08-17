@@ -10,4 +10,6 @@ abstract class Assets {
   static const String pharmacy = 'assets/images/pngs/pharmacy.png';
   static const String medicalQuestion =
       'assets/images/pngs/medical_question.png';
+  static const String blueContainer = 'assets/images/pngs/blue_card.png';
+  static const String robot = 'assets/images/pngs/robot.png';
 }

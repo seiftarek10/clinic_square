@@ -1,6 +1,7 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
+import 'package:clinic_square/Features/Home/Presentaion/View/Widgets/ai_category_card.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/Widgets/all_home_categories.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/Widgets/home_header_text.dart';
 import 'package:flutter/material.dart';
@@ -19,7 +20,9 @@ class HomePage extends StatelessWidget {
               Space.topSpace,
               const HomeHeaderText(),
               Space.verticalSpace24,
-              const AllHomeGategroies()
+              const AllHomeGategroies(),
+              Space.verticalSpace12,
+              const AiCard()
               
               ],
           )),
