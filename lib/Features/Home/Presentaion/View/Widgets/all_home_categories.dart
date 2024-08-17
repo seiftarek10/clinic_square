@@ -1,5 +1,5 @@
 import 'package:clinic_square/Core/utils/assets.dart';
-import 'package:clinic_square/Features/Home/Presentaion/View/home_category.dart';
+import 'package:clinic_square/Features/Home/Presentaion/View/Widgets/home_category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
