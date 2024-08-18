@@ -11,22 +11,21 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-       body: AppScrollWidget(
-        child: AppPadding(
-          child: Column(
+        body: AppScrollWidget(
+          child: AppPadding(
+              child: Column(
             children: [
-              Space.topSpace,
+              Space.topSpace40,
               const HomeHeaderText(),
               Space.verticalSpace24,
               const AllHomeGategroies(),
               Space.verticalSpace12,
               const AiCard()
-              
-              ],
+            ],
           )),
-       ),
+        ),
       ),
     );
   }
