@@ -9,17 +9,16 @@ class HomeCategory extends StatelessWidget {
       required this.category,
       this.imageFlex,
       this.textFlex,
-      required this.categoryIcon});
+      required this.categoryIcon, required this.onTap});
 
   final String category, categoryIcon;
   final int? imageFlex, textFlex;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-       
-      },
+      onTap: onTap,
       child: Container(
         width: 102.w,
         height: 120.h,
