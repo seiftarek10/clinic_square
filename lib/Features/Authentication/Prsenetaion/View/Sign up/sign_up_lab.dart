@@ -22,7 +22,7 @@ class SignupLab extends StatelessWidget {
               child: Column(
             children: [
               Space.topSpace,
-              const HeaderText(title: 'As Laboratory', subTitle: "Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!"),
+              const HeaderText(title: 'As Laboratory', subTitle: "Sign up now and start exploring all that our app has to offer. We re excited to welcome you to our community!"),
               Space.verticalSpace12,
               const SignupForm(
                 showAgeField: false,
