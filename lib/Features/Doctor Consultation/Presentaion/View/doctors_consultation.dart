@@ -17,8 +17,8 @@ class DoctorsConsultaion extends StatelessWidget {
             child: AppPadding(
                 child: Column(
           children: [
-            Space.verticalSpace18,
-            const HeaderBar(),
+            Space.topSpace20,
+            const HeaderBar(headerText: 'Doctors',),
             Space.verticalSpace18,
             const SearchSection(),
             Space.verticalSpace12,

@@ -17,10 +17,11 @@ class SignUpAs extends StatelessWidget {
           child: AppPadding(
             child: Column(
               children: [
-                Space.topSpace,
+                Space.topSpace40,
                 const HeaderText(
                   title: 'Sing Up As',
-                  subTitle:  'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
+                  subTitle:
+                      'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
                 ),
                 SizedBox(
                   height: 30.h,

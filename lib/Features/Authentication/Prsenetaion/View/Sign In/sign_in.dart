@@ -10,7 +10,6 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
-
 class SignIn extends StatelessWidget {
   const SignIn({super.key});
 
@@ -22,10 +21,11 @@ class SignIn extends StatelessWidget {
             child: AppPadding(
                 child: Column(
           children: [
-            Space.topSpace,
+            Space.topSpace40,
             const HeaderText(
-              title: 'Welcome Back',
-              subTitle:"We're excited to have you back, can't wait to see what you've been up to since you last logged in." ),
+                title: 'Welcome Back',
+                subTitle:
+                    "We're excited to have you back, can't wait to see what you've been up to since you last logged in."),
             Space.verticalSpace24,
             const SignInForm(),
             const ForgetPassworText(),
@@ -34,7 +34,6 @@ class SignIn extends StatelessWidget {
             const PolicesAndContions(),
             Space.verticalSpace24,
             const NoAccountText()
-
           ],
         ))),
       ),

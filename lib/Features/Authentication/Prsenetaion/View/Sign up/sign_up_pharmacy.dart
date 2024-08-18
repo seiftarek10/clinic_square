@@ -21,26 +21,26 @@ class SignUpPharmacy extends StatelessWidget {
           child: AppPadding(
               child: Column(
             children: [
-              Space.topSpace,
-             const HeaderText(
-                  title: 'As Pharmacy',
-                  subTitle:  'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-                ),
+              Space.topSpace40,
+              const HeaderText(
+                title: 'As Pharmacy',
+                subTitle:
+                    'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
+              ),
               Space.verticalSpace12,
               const SignupForm(
                 showAgeField: false,
                 location: 'Location',
-              ), Space.verticalSpace12,
-                const AttachFiled(),
-                Space.verticalSpace12,
-                AppButton(
-                  text: 'Sign Up',
-                  onPressed: () {}),
-                const AppDivider(),
-                const PolicesAndContions(),
-                Space.verticalSpace18,
-                const AlreadyHaveAccountText(),
-                Space.verticalSpace12
+              ),
+              Space.verticalSpace12,
+              const AttachFiled(),
+              Space.verticalSpace12,
+              AppButton(text: 'Sign Up', onPressed: () {}),
+              const AppDivider(),
+              const PolicesAndContions(),
+              Space.verticalSpace18,
+              const AlreadyHaveAccountText(),
+              Space.verticalSpace12
             ],
           )),
         ),

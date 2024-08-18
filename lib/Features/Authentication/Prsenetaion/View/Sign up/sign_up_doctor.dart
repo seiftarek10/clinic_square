@@ -21,11 +21,12 @@ class SignUpDoctor extends StatelessWidget {
           child: AppPadding(
               child: Column(
             children: [
-              Space.topSpace,
+              Space.topSpace40,
               const HeaderText(
-                  title: 'As Doctor',
-                  subTitle:  'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
-                ),
+                title: 'As Doctor',
+                subTitle:
+                    'Sign up now and start exploring all that our app has to offer. We\'re excited to welcome you to our community!',
+              ),
               Space.verticalSpace12,
               const SignupForm(
                 showAgeField: true,

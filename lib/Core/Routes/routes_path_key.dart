@@ -8,4 +8,5 @@ abstract class Routes {
   static const String bottomBar = '/bottomBar';
   static const String home = '/home';
   static const String doctorConsultation = '/doctorconsultation';
+  static const String doctorDetails = '/doctorDetails';
 }

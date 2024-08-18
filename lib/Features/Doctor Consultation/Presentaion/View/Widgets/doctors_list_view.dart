@@ -14,7 +14,9 @@ class DoctorsListView extends StatelessWidget {
       itemBuilder: (BuildContext context, int index) {
         return Padding(
           padding: EdgeInsets.only(bottom: 12.h),
-          child: const DoctorCard());
+          child: const DoctorCard(
+            isClickable: true,
+          ));
       },
     );
   }
