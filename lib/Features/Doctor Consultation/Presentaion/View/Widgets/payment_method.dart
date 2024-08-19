@@ -1,12 +1,37 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
-import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/Widgets/payment_option.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class PaymentMethod extends StatelessWidget {
+class PaymentMethod extends StatefulWidget {
   const PaymentMethod({super.key});
+
+  @override
+  State<PaymentMethod> createState() => _PaymentMethodState();
+}
+
+class _PaymentMethodState extends State<PaymentMethod> {
+  bool _isPayByCreditCard = false;
+  bool _isPayInClinic = false;
+
+  void _handle1Checkbox(bool? value) {
+    setState(() {
+      _isPayByCreditCard = value!;
+      if (_isPayByCreditCard) {
+        _isPayInClinic = false;
+      }
+    });
+  }
+
+  void _handle2Checkbox(bool? value) {
+    setState(() {
+      _isPayInClinic = value!;
+      if (_isPayInClinic) {
+        _isPayByCreditCard = false;
+      }
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -28,7 +53,16 @@ class PaymentMethod extends StatelessWidget {
           ],
         ),
         Space.bottomSpace,
-        const PaymentOption()
+        PaymentOption(
+          title: 'Credit Card',
+          isChecked: _isPayByCreditCard,
+          onChanged: _handle1Checkbox,
+        ),
+        PaymentOption(
+          title: 'Payment at the Clinic',
+          isChecked: _isPayInClinic,
+          onChanged: _handle2Checkbox,
+        ),
       ],
     );
   }

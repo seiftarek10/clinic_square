@@ -35,13 +35,11 @@ class DoctorDetailsPage extends StatelessWidget {
             const AppDivider(),
             const DoctorInfoConsultation(),
             Space.verticalSpace50,
-            Align(
-                alignment: Alignment.center,
-                child: AppButton(
-                    onPressed: () {
-                      GoRouter.of(context).push(Routes.bookAppoinment);
-                    },
-                    text: 'Book'))
+            AppButton(
+                onPressed: () {
+                  GoRouter.of(context).push(Routes.bookAppoinment);
+                },
+                text: 'Book')
           ],
         ))),
       ),

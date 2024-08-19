@@ -1,4 +1,5 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
+import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:clinic_square/Core/Widgets/header_bar.dart';
@@ -27,7 +28,9 @@ class BookAppoinmentView extends StatelessWidget {
             const AppDivider(),
             const AddYourLabTestsWidget(),
             const AppDivider(),
-            const PaymentMethod()
+            const PaymentMethod(),
+            Space.verticalSpace18,
+            AppButton(onPressed: (){}, text: "Book")
           ],
         ))),
       ),
