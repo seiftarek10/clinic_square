@@ -16,44 +16,40 @@ class AllHomeGategroies extends StatelessWidget {
       direction: Axis.horizontal,
       children: [
         HomeCategory(
-          categoryIcon: Assets.doctorConulation,
+          categoryIcon: Assets.doctorConulationIcon,
           category: 'Consultaion',
           onTap: () {
             GoRouter.of(context).push(Routes.doctorConsultation);
           },
         ),
         HomeCategory(
-          categoryIcon: Assets.lab,
+          categoryIcon: Assets.labIcon,
           category: 'Lab',
-          onTap: (){},
+          onTap: () {},
         ),
         HomeCategory(
-          categoryIcon: Assets.pharmacy,
+          categoryIcon: Assets.pharmacyIcon,
           category: 'Pharmacy',
-          onTap: (){},
-
+          onTap: () {},
         ),
         HomeCategory(
-          categoryIcon: Assets.homeVisit,
+          categoryIcon: Assets.homeVisitIcon,
           category: 'Home Visit',
-          onTap: (){},
-
+          onTap: () {},
         ),
         HomeCategory(
-          categoryIcon: Assets.bmiCalculator,
+          categoryIcon: Assets.bmiCalculatorIcon,
           category: 'Bmi Calculator',
           imageFlex: 6,
           textFlex: 5,
-          onTap: (){},
-
+          onTap: () {},
         ),
         HomeCategory(
-          categoryIcon: Assets.medicalQuestion,
+          categoryIcon: Assets.medicalQuestionIcon,
           category: 'Medical Quesitions',
           imageFlex: 6,
           textFlex: 5,
-          onTap: (){},
-
+          onTap: () {},
         ),
       ],
     );

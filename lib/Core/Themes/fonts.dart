@@ -6,6 +6,7 @@ import 'package:google_fonts/google_fonts.dart';
 
 abstract class Fonts {
   static TextStyle font18_250Lightgrey = GoogleFonts.inter(
+    
       fontSize: 18.sp, fontWeight: FontWeight.w300, color: AppColors.darkBlue);
   static TextStyle font24_700mainBlue = GoogleFonts.inter(
       fontSize: 24.sp, fontWeight: FontWeight.w700, color: AppColors.mainBlue);

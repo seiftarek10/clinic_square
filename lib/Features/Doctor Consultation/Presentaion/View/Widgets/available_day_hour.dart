@@ -1,7 +1,8 @@
-
-import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
+import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AvailableHourDay extends StatelessWidget {
   const AvailableHourDay({
@@ -10,12 +11,20 @@ class AvailableHourDay extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Row(
       children: [
-        Text("Available Time",style: Fonts.font20_700darkBlue),
-        Space.bottomSpace,
-        Text('From 8.00 AM To 5.00 PM',style: Fonts.font16_400DarkBlue),
+        SvgPicture.asset(
+          Assets.dateIcon,
+          height: 50.h,
+        ),
+        SizedBox(width: 12.w),
+        Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            Text("Available Time", style: Fonts.font20_700darkBlue),
+            Text('From 8.00 AM To 5.00 PM', style: Fonts.font16_400DarkBlue),
+          ],
+        ),
       ],
     );
   }

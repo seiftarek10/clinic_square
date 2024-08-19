@@ -24,7 +24,8 @@ class AiCard extends StatelessWidget {
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(24),
                 image: const DecorationImage(
-                    image: AssetImage(Assets.blueContainer), fit: BoxFit.fill)),
+                    image: AssetImage(Assets.blueContainerIcon),
+                    fit: BoxFit.fill)),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               crossAxisAlignment: CrossAxisAlignment.start,
@@ -38,13 +39,13 @@ class AiCard extends StatelessWidget {
             ),
           ),
           Positioned(
-            right: 8.w,
-            top: 0,
-            child:Image.asset(
-              Assets.robot,
-              height: 200,
-              fit: BoxFit.fill,
-              ) )
+              right: 8.w,
+              top: 0,
+              child: Image.asset(
+                Assets.robotIcon,
+                height: 200,
+                fit: BoxFit.fill,
+              ))
         ],
       ),
     );
