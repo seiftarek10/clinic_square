@@ -11,25 +11,26 @@ class DayContainer extends StatelessWidget {
   final int index, selectedIndex;
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: const Duration(milliseconds: 300),
-      curve:  Curves.easeOutQuint,
-      margin: selectedIndex==index?EdgeInsets.zero:const EdgeInsets.all(2),
-      width: selectedIndex==index? 85.w :65.w,
-      height: selectedIndex==index? 70.h:51.h,
-      decoration: BoxDecoration(
-          color: selectedIndex==index? AppColors.mainBlue:AppColors.middleGrey,
-          borderRadius: BorderRadius.circular(15)),
-      child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
-        children: [
-          Text('Wed', style: Fonts.font16_600White),
-          Text(
-            '18',
-            style: Fonts.font16_600White,
-          )
-        ],
+    return AnimatedScale(
+      duration: const Duration(milliseconds: 200),
+      scale: selectedIndex==index?1:0.8,
+      child: Container(
+        width: 85.w,
+        decoration: BoxDecoration(
+            color: selectedIndex==index? AppColors.mainBlue:AppColors.middleGrey,
+            borderRadius: BorderRadius.circular(15)),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            Text('Wed', style: Fonts.font16_600White),
+            Text(
+              '18',
+              style: Fonts.font16_600White,
+            )
+          ],
+        ),
       ),
     );
+   
   }
 }

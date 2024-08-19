@@ -23,19 +23,17 @@ class _AvaliableDoctorDaysListState extends State<AvaliableDoctorDaysList> {
           physics: const BouncingScrollPhysics(),
           itemCount: 20,
           itemBuilder: (BuildContext context, int index) {
-            return Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 5),
-                child: GestureDetector(
-                  onTap: () {
-                    setState(() {
-                      _selecedIndex = index;
-                    });
-                  },
-                  child: DayContainer(
-                    index: index,
-                    selectedIndex: _selecedIndex,
-                  ),
-                ));
+            return GestureDetector(
+              onTap: () {
+                setState(() {
+                  _selecedIndex = index;
+                });
+              },
+              child: DayContainer(
+                index: index,
+                selectedIndex: _selecedIndex,
+              ),
+            );
           }),
     );
   }
