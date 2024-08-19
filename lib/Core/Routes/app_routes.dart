@@ -6,6 +6,7 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_lab.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_pharmacy.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_as.dart';
+import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/book_appoinment.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctor_details.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctors_consultation.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
@@ -38,6 +39,9 @@ final appRouter = GoRouter(
         builder: (context, state) => const DoctorsConsultaion()),
     GoRoute(
         path: Routes.doctorDetails,
-        builder: (context, state) => const DoctorDetailsPage())
+        builder: (context, state) => const DoctorDetailsPage()),
+    GoRoute(path: Routes.bookAppoinment,
+    builder: (context, state) => const BookAppoinmentView(),
+    )
   ],
 );

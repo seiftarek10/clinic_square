@@ -16,9 +16,9 @@ class DoctorCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        isClickable==true?
-        GoRouter.of(context).push(Routes.doctorDetails):
-        null;
+        isClickable == true
+            ? GoRouter.of(context).push(Routes.doctorDetails)
+            : null;
       },
       child: SizedBox(
         height: 126.h,
@@ -34,7 +34,7 @@ class DoctorCard extends StatelessWidget {
                     aspectRatio: 1,
                     child: ClipRRect(
                         borderRadius: BorderRadius.circular(15),
-                        child: Image.asset(Assets.doctorImage,
+                        child: Image.asset(Assets.doctorImageIcon,
                             fit: BoxFit.cover))),
               ),
             ),
