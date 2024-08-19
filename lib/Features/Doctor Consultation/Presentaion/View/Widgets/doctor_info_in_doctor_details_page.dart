@@ -16,7 +16,7 @@ class DoctorInfoConsultation extends StatelessWidget {
         Space.verticalSpace18,
         Text("Working Time", style: Fonts.font20_700darkBlue),
         Space.bottomSpace,
-        Text("Monday - Friday, 8.00 AM - 4 PM",
+        Text("Monday - Friday",
             style: Fonts.font16_400DarkBlue),
         Space.verticalSpace18,
         Text("Phone Number",style: Fonts.font20_700darkBlue),
