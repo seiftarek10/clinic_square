@@ -9,7 +9,8 @@ class HomeCategory extends StatelessWidget {
       required this.category,
       this.imageFlex,
       this.textFlex,
-      required this.categoryIcon, required this.onTap});
+      required this.categoryIcon,
+      required this.onTap});
 
   final String category, categoryIcon;
   final int? imageFlex, textFlex;
@@ -37,7 +38,7 @@ class HomeCategory extends StatelessWidget {
                 child: Text(
                   category,
                   textAlign: TextAlign.center,
-                  style: Fonts.font14_700DarkBlue,
+                  style: Fonts.font14_700darkBlue,
                 ))
           ],
         ),

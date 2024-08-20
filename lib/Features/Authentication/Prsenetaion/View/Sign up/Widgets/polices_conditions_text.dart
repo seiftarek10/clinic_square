@@ -8,21 +8,15 @@ class PolicesAndContions extends StatelessWidget {
   Widget build(BuildContext context) {
     return RichText(
       textAlign: TextAlign.center,
-      text:TextSpan(
-        text: 'By logging, you agree to our ',
-        style: Fonts.font14_300DarkBlue,
-        children:<TextSpan> [
-          TextSpan(
-            text: 'Terms & Conditions',
-            style: Fonts.font14_700DarkBlue
-          ),const TextSpan(text: ' and '),
-          TextSpan(
-            text: 'Privacy Policy',
-            style: Fonts.font14_700DarkBlue
-          )
-        ]
-      ),
-      
+      text: TextSpan(
+          text: 'By logging, you agree to our ',
+          style: Fonts.font14_300DarkBlue,
+          children: <TextSpan>[
+            TextSpan(
+                text: 'Terms & Conditions', style: Fonts.font14_700darkBlue),
+            const TextSpan(text: ' and '),
+            TextSpan(text: 'Privacy Policy', style: Fonts.font14_700darkBlue)
+          ]),
     );
   }
 }
