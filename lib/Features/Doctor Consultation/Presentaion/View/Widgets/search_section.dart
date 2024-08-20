@@ -1,5 +1,5 @@
 import 'package:clinic_square/Core/Widgets/search_filed.dart';
-import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/Widgets/Filter.dart';
+import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/Widgets/filter.dart';
 import 'package:flutter/material.dart';
 
 class SearchSection extends StatelessWidget {
