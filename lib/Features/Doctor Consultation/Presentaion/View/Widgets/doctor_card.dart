@@ -1,4 +1,5 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
+import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
@@ -14,58 +15,65 @@ class DoctorCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: () {
-        isClickable == true
-            ? GoRouter.of(context).push(Routes.doctorDetails)
-            : null;
-      },
-      child: SizedBox(
-        height: 126.h,
-        width: 343.w,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
-            Expanded(
-              flex: 4,
-              child: SizedBox(
-                height: double.infinity,
-                child: AspectRatio(
-                    aspectRatio: 1,
-                    child: ClipRRect(
-                        borderRadius: BorderRadius.circular(15),
-                        child: Image.asset(Assets.doctorImageIcon,
-                            fit: BoxFit.cover))),
-              ),
+    return SizedBox(
+      height: 126.h,
+      width: 343.w,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Expanded(
+            flex: 4,
+            child: SizedBox(
+              height: double.infinity,
+              child: AspectRatio(
+                  aspectRatio: 1,
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(Assets.doctorImageIcon,
+                          fit: BoxFit.cover))),
             ),
-            SizedBox(width: 16.w),
-            Expanded(
-                flex: 7,
-                child: Column(
-                  mainAxisAlignment: MainAxisAlignment.center,
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 6.h),
-                    Text("Dr.Seif Tariq Maher",
-                        style: Fonts.font16_600DarkBlue
-                            .copyWith(overflow: TextOverflow.ellipsis)),
-                    SizedBox(height: 6.h),
-                    Text('General | RSUD Gatot Subroto',
-                        maxLines: 2,
-                        style: Fonts.font14_300DarkBlue
-                            .copyWith(overflow: TextOverflow.ellipsis)),
-                    SizedBox(height: 6.h),
-                    Row(
-                      children: [
-                        const Icon(EvaIcons.star, color: Colors.orange),
-                        SizedBox(width: 4.w),
-                        const Text('4.8 (4.279 reviews)')
-                      ],
-                    ),
-                  ],
-                ))
-          ],
-        ),
+          ),
+          SizedBox(width: 16.w),
+          Expanded(
+              flex: 7,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 4.h),
+                  Text("Dr.Seif Tariq Maher",
+                      style: Fonts.font16_600DarkBlue
+                          .copyWith(overflow: TextOverflow.ellipsis)),
+                  SizedBox(height: 6.h),
+                  Text('General | RSUD Gatot Subroto',
+                      maxLines: 2,
+                      style: Fonts.font14_300DarkBlue
+                          .copyWith(overflow: TextOverflow.ellipsis)),
+                  // SizedBox(height: 6.h),
+                  Row(
+                    children: [
+                      const Icon(EvaIcons.star, color: Colors.orange),
+                      SizedBox(width: 4.w),
+                      const Text('4.8 (4.279 reviews)'),
+                    ],
+                  ),
+                  isClickable == true
+                      ? Align(
+                          alignment: Alignment.bottomRight,
+                          child: ElevatedButton(
+                              onPressed: () {
+                                isClickable == true
+                                    ? GoRouter.of(context)
+                                        .push(Routes.doctorDetails)
+                                    : null;
+                              },
+                              style: ElevatedButton.styleFrom(
+                                  backgroundColor: AppColors.mainBlue),
+                              child:
+                                  Text("Book", style: Fonts.font12_300White)))
+                      : const SizedBox.shrink()
+                ],
+              ))
+        ],
       ),
     );
   }
