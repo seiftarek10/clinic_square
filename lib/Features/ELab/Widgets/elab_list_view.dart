@@ -16,7 +16,7 @@ class ElabListView extends StatelessWidget {
         return Padding(
           padding: EdgeInsets.only(bottom: 12.h),
           child: const ElabCard(
-            isClickable: false,
+            
           ));
       },
     );
