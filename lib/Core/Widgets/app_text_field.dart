@@ -62,14 +62,15 @@ class _AppTextFieldState extends State<AppTextField> {
               hintStyle: Fonts.font18_250Lightgrey,
               prefixIcon: Icon(
                 widget.icon,
-                color: isFocused ? AppColors.mainBlue : AppColors.lightGrey,
+                color: isFocused ? AppColors.mainBlue : AppColors.darkBlue,
               ),
               suffixIcon: IconButton(
                 onPressed: widget.onPressed,
                 icon: Icon(widget.suffixIcon,
-                    color: isFocused ? AppColors.mainBlue : AppColors.lightGrey),
+                    color: isFocused ? AppColors.mainBlue : AppColors.
+                    darkBlue),
               ),
-              enabledBorder: borderStyle(color: AppColors.lightGrey, width: 0.7),
+              enabledBorder: borderStyle(color: AppColors.darkBlue, width: 0.7),
               focusedBorder: borderStyle(width: 1.5, color: AppColors.mainBlue),
               errorBorder: borderStyle(width: 1.5, color: Colors.red),
               focusedErrorBorder: borderStyle(width: 1.5, color: Colors.red)

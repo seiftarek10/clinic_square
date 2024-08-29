@@ -9,17 +9,20 @@ class AppButton extends StatelessWidget {
   final String text;
   @override
   Widget build(BuildContext context) {
-    return ElevatedButton(
-      onPressed: onPressed,
-      style: ElevatedButton.styleFrom(
-        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
-        padding:
-            EdgeInsetsDirectional.symmetric(horizontal: 130.w, vertical: 15.h),
-        backgroundColor: AppColors.mainBlue,
-      ),
-      child: Text(
-        text,
-        style: Fonts.font16_600White,
+    return Align(
+      alignment: AlignmentDirectional.center,
+      child: ElevatedButton(
+        onPressed: onPressed,
+        style: ElevatedButton.styleFrom(
+          shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20)),
+          padding:
+              EdgeInsetsDirectional.symmetric(horizontal: 130.w, vertical: 15.h),
+          backgroundColor: AppColors.mainBlue,
+        ),
+        child: Text(
+          text,
+          style: Fonts.font16_600White,
+        ),
       ),
     );
   }
