@@ -55,7 +55,7 @@ class ElabCard extends StatelessWidget {
                           style: ElevatedButton.styleFrom(
                               // padding: EdgeInsets.zero,
                               backgroundColor: AppColors.mainBlue),
-                          child: Text("Boo", style: Fonts.font12_300White)))
+                          child: Text("Book", style: Fonts.font12_300White)))
                 ],
               ))
         ],
