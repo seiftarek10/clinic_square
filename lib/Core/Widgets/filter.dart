@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 
 class Filter extends StatefulWidget {
   const Filter({
-    super.key,
+    super.key, required this.label,
   });
-
+  final String label;
   @override
   State<Filter> createState() => _FilterState();
 }
@@ -17,7 +17,7 @@ class _FilterState extends State<Filter> {
     return FittedBox(
       child: DropdownButton(
         hint: Text(
-          "Speciality",
+          widget.label,
           style: Fonts.font20_700darkBlue,
         ),
         padding: EdgeInsets.zero,
