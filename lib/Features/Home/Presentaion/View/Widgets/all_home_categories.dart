@@ -25,7 +25,9 @@ class AllHomeGategroies extends StatelessWidget {
         HomeCategory(
           categoryIcon: Assets.labIcon,
           category: 'Lab',
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(Routes.eLab);
+          },
         ),
         HomeCategory(
           categoryIcon: Assets.pharmacyIcon,

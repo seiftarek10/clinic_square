@@ -15,7 +15,8 @@ class ClinicSquare extends StatelessWidget {
           debugShowCheckedModeBanner: false,
           routerConfig: appRouter,
         );
-      },
+      },            
     );
   }
+  
 }
