@@ -2,29 +2,21 @@ import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AnimatedSelctionIcon extends StatefulWidget {
-  const AnimatedSelctionIcon({super.key});
+class AnimatedSelctionIcon extends StatelessWidget {
+  const AnimatedSelctionIcon({super.key, required this.isAdded, this.onTap});
 
-  @override
-  State<AnimatedSelctionIcon> createState() => _AnimatedSelctionIconState();
-}
-
-class _AnimatedSelctionIconState extends State<AnimatedSelctionIcon> {
-    bool _isAdded = false;
+  final bool isAdded;
+  final void Function()? onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
-      onTap: () {
-        setState(() {
-          _isAdded = !_isAdded;
-        });
-      },
+      onTap: onTap,
       child: AnimatedSwitcher(
           duration: const Duration(milliseconds: 200),
           transitionBuilder: (Widget child, Animation<double> animation) {
             return FadeTransition(opacity: animation, child: child);
           },
-          child: _isAdded
+          child: isAdded
               ? Container(
                   key: const ValueKey("done"),
                   width: 32.w,

@@ -3,9 +3,15 @@ import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:clinic_square/Features/E-Lab/Presentaion/Views/Widgets/test.dart';
 import 'package:flutter/material.dart';
 
-class SelectTests extends StatelessWidget {
+class SelectTests extends StatefulWidget {
   const SelectTests({super.key});
 
+  @override
+  State<SelectTests> createState() => _SelectTestsState();
+}
+
+class _SelectTestsState extends State<SelectTests> {
+  final Set<int> _selectedIndices = {};
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -15,7 +21,10 @@ class SelectTests extends StatelessWidget {
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
             Text("Select Test", style: Fonts.font20_700darkBlue),
-            Text("Total : 90",style: Fonts.font14_700darkBlue,)
+            Text(
+              "Total : 90",
+              style: Fonts.font14_700darkBlue,
+            )
           ],
         ),
         Space.verticalSpace18,
@@ -24,7 +33,19 @@ class SelectTests extends StatelessWidget {
             physics: const BouncingScrollPhysics(),
             itemCount: 4,
             itemBuilder: (BuildContext context, int index) {
-              return const Test();
+              bool selectedIndex = _selectedIndices.contains(index);
+              return Test(
+                onTap: () {
+                  setState(() {
+                    if (selectedIndex) {
+                      _selectedIndices.remove(index);
+                    } else {
+                      _selectedIndices.add(index);
+                    }
+                  });
+                },
+                isAdded: selectedIndex,
+              );
             })
       ],
     );
