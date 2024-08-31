@@ -1,4 +1,5 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
+import 'package:clinic_square/Core/Widgets/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:clinic_square/Core/Widgets/header_bar.dart';
@@ -27,7 +28,10 @@ class ElabBookView extends StatelessWidget {
             const AppDivider(height: 35),
             const ELabWorkDays(),
             const AppDivider(height: 35),
-            const SelectTests()
+            Space.verticalSpace12,
+            const SelectTests(),
+            AppButton(onPressed: (){}, text: "Book"),
+            Space.verticalSpace12
           ],
         ))),
       ),

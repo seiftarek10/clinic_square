@@ -30,10 +30,10 @@ class _AnimatedSelctionIconState extends State<AnimatedSelctionIcon> {
                   width: 32.w,
                   height: 32.h,
                   decoration: BoxDecoration(
-                      color: Colors.blue[600],
+                      color: Colors.blue[900],
                       borderRadius: BorderRadius.circular(10)),
                   child: const Icon(Icons.done,
-                      key: ValueKey("doneIcon"), size: 20, color: Colors.white),
+                      key: ValueKey("doneIcon"), size: 18, color: Colors.white),
                 )
               : Container(
                   key: const ValueKey("add"),
