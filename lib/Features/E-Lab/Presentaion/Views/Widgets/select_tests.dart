@@ -1,6 +1,6 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
-import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/test.dart';
+import 'package:clinic_square/Features/E-Lab/Presentaion/Views/Widgets/test.dart';
 import 'package:flutter/material.dart';
 
 class SelectTests extends StatelessWidget {

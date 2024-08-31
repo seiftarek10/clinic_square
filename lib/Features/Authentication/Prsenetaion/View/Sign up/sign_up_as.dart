@@ -6,8 +6,8 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SignUpAs extends StatelessWidget {
-  const SignUpAs({super.key});
+class SignUpAsView extends StatelessWidget {
+  const SignUpAsView({super.key});
 
   @override
   Widget build(BuildContext context) {

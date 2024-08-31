@@ -10,8 +10,8 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
-class SignupLab extends StatelessWidget {
-  const SignupLab({super.key});
+class SignupLabView extends StatelessWidget {
+  const SignupLabView({super.key});
 
   @override
   Widget build(BuildContext context) {

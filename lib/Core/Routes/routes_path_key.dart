@@ -12,4 +12,5 @@ abstract class Routes {
   static const String bookAppoinment = '/bookApoinment';
   static const String eLab = '/elab';
   static const String eLabBookView = '/elabbookview';
+  static const String ePharmacy = '/epharmacy';
 }

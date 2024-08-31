@@ -9,8 +9,9 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/book_appoinment.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctor_details.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctors_consultation.dart';
-import 'package:clinic_square/Features/ELab/Presentaion/Views/elab.dart';
-import 'package:clinic_square/Features/ELab/Presentaion/Views/elab_book_view.dart';
+import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab.dart';
+import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab_book_view.dart';
+import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:go_router/go_router.dart';
 
@@ -19,33 +20,41 @@ final appRouter = GoRouter(
   routes: [
     GoRoute(path: '/', builder: (context, state) => const AppBottomBar()),
     GoRoute(
-        path: Routes.singUpAs, builder: (context, state) => const SignUpAs()),
+        path: Routes.singUpAs,
+        builder: (context, state) => const SignUpAsView()),
     GoRoute(
         path: Routes.signUpPatient,
-        builder: (context, state) => const SignUpPatinet()),
+        builder: (context, state) => const SignUpPatinetView()),
     GoRoute(
         path: Routes.signUpDoctor,
-        builder: (context, state) => const SignUpDoctor()),
+        builder: (context, state) => const SignUpDoctorView()),
     GoRoute(
-        path: Routes.signUpLab, builder: (context, state) => const SignupLab()),
+        path: Routes.signUpLab,
+        builder: (context, state) => const SignupLabView()),
     GoRoute(
         path: Routes.signUpPharmacy,
         builder: (context, state) => const SignUpPharmacy()),
-    GoRoute(path: Routes.signin, builder: (context, state) => const SignIn()),
+    GoRoute(
+        path: Routes.signin, builder: (context, state) => const SignInView()),
     GoRoute(path: Routes.home, builder: (context, state) => const HomePage()),
     GoRoute(
         path: Routes.bottomBar,
         builder: (context, state) => const AppBottomBar()),
     GoRoute(
         path: Routes.doctorConsultation,
-        builder: (context, state) => const DoctorsConsultaion()),
+        builder: (context, state) => const DoctorsConsultaionView()),
     GoRoute(
         path: Routes.doctorDetails,
         builder: (context, state) => const DoctorDetailsPage()),
     GoRoute(
         path: Routes.bookAppoinment,
         builder: (context, state) => const BookAppoinmentView()),
-    GoRoute(path: Routes.eLab, builder: (context, state) => const Elab()),
-    GoRoute(path: Routes.eLabBookView, builder: (context, state) => const ElabBookView()),
+    GoRoute(path: Routes.eLab, builder: (context, state) => const ElabView()),
+    GoRoute(
+        path: Routes.eLabBookView,
+        builder: (context, state) => const ElabBookView()),
+    GoRoute(
+        path: Routes.ePharmacy,
+        builder: (context, state) => const EPharmacyView())
   ],
 );

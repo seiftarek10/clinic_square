@@ -4,9 +4,9 @@ import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:clinic_square/Core/Widgets/header_bar.dart';
 import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
-import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/elab_location.dart';
-import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/elab_work_days.dart';
-import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/select_tests.dart';
+import 'package:clinic_square/Features/E-Lab/Presentaion/Views/Widgets/elab_location.dart';
+import 'package:clinic_square/Features/E-Lab/Presentaion/Views/Widgets/elab_work_days.dart';
+import 'package:clinic_square/Features/E-Lab/Presentaion/Views/Widgets/select_tests.dart';
 import 'package:flutter/material.dart';
 
 class ElabBookView extends StatelessWidget {
