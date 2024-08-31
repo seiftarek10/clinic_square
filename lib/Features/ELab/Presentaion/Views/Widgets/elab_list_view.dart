@@ -1,5 +1,5 @@
 
-import 'package:clinic_square/Features/ELab/Widgets/elab_card.dart';
+import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/elab_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

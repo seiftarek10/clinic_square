@@ -3,7 +3,7 @@ import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/header_bar.dart';
 import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
 import 'package:clinic_square/Core/Widgets/search_section.dart';
-import 'package:clinic_square/Features/ELab/Widgets/elab_list_view.dart';
+import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/elab_list_view.dart';
 import 'package:flutter/material.dart';
 
 class Elab extends StatelessWidget {
