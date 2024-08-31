@@ -5,7 +5,10 @@ import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
 class Test extends StatelessWidget {
-  const Test({super.key});
+  const Test({super.key, required this.isAdded, required this.onTap});
+
+  final bool isAdded;
+  final void Function() onTap;
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +27,10 @@ class Test extends StatelessWidget {
                         .copyWith(color: AppColors.darkBlue)),
               ],
             ),
-            const AnimatedSelctionIcon()
+            AnimatedSelctionIcon(
+              onTap: onTap,
+              isSelected: isAdded,
+            )
           ],
         ),
         const AppDivider(height: 40)

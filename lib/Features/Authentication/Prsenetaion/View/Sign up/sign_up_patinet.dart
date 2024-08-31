@@ -1,23 +1,19 @@
+import 'package:clinic_square/Core/Helpers/app_screen.dart';
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_main_button.dart';
-import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/header_text.dart';
-import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Widgets/already_have_account.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Widgets/polices_conditions_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/Widgets/signup_form.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
-class SignUpPatinet extends StatelessWidget {
-  const SignUpPatinet({super.key});
+class SignUpPatinetView extends StatelessWidget {
+  const SignUpPatinetView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-        child: Scaffold(
-            body: AppPadding(
-      child: AppScrollWidget(
+    return AppScreen(
         child: Column(
           children: [
             Space.topSpace40,
@@ -39,7 +35,6 @@ class SignUpPatinet extends StatelessWidget {
             Space.verticalSpace12
           ],
         ),
-      ),
-    )));
+      );
   }
 }
