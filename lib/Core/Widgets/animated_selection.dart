@@ -3,20 +3,20 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AnimatedSelctionIcon extends StatelessWidget {
-  const AnimatedSelctionIcon({super.key, required this.isAdded, this.onTap});
+  const AnimatedSelctionIcon({super.key, required this.isSelected, required this.onTap});
 
-  final bool isAdded;
-  final void Function()? onTap;
+  final bool isSelected;
+  final void Function() onTap;
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: onTap,
       child: AnimatedSwitcher(
-          duration: const Duration(milliseconds: 200),
+          duration: const Duration(milliseconds: 270),
           transitionBuilder: (Widget child, Animation<double> animation) {
             return FadeTransition(opacity: animation, child: child);
           },
-          child: isAdded
+          child: isSelected
               ? Container(
                   key: const ValueKey("done"),
                   width: 32.w,

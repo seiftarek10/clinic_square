@@ -10,8 +10,8 @@ import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/Wi
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-class DoctorDetailsPage extends StatelessWidget {
-  const DoctorDetailsPage({super.key});
+class DoctorDetailsView extends StatelessWidget {
+  const DoctorDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {

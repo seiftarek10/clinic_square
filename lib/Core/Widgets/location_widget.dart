@@ -13,11 +13,11 @@ class LocationWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Expanded(
+        const Expanded(
           child: CircleAvatar(
             radius: 20,
-            backgroundColor: Colors.green[200],
-            child: const Icon(
+            backgroundColor: Color.fromARGB(255, 192, 243, 194),
+            child: Icon(
               Icons.location_on,
               color: Colors.green,
             ),

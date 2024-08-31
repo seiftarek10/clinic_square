@@ -12,6 +12,7 @@ import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/do
 import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab.dart';
 import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab_book_view.dart';
 import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy.dart';
+import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy_info.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:go_router/go_router.dart';
 
@@ -45,7 +46,7 @@ final appRouter = GoRouter(
         builder: (context, state) => const DoctorsConsultaionView()),
     GoRoute(
         path: Routes.doctorDetails,
-        builder: (context, state) => const DoctorDetailsPage()),
+        builder: (context, state) => const DoctorDetailsView()),
     GoRoute(
         path: Routes.bookAppoinment,
         builder: (context, state) => const BookAppoinmentView()),
@@ -55,6 +56,9 @@ final appRouter = GoRouter(
         builder: (context, state) => const ElabBookView()),
     GoRoute(
         path: Routes.ePharmacy,
-        builder: (context, state) => const EPharmacyView())
+        builder: (context, state) => const EPharmacyView()),
+    GoRoute(
+        path: Routes.ePharmacyInfo,
+        builder: (context, state) => const EPharmacyInfoView())
   ],
 );

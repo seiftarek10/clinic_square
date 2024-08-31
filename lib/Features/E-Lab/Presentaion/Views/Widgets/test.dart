@@ -27,9 +27,9 @@ class Test extends StatelessWidget {
                         .copyWith(color: AppColors.darkBlue)),
               ],
             ),
-             AnimatedSelctionIcon(
+            AnimatedSelctionIcon(
               onTap: onTap,
-              isAdded: isAdded,
+              isSelected: isAdded,
             )
           ],
         ),
