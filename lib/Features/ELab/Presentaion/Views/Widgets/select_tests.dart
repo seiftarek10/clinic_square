@@ -22,7 +22,7 @@ class SelectTests extends StatelessWidget {
         ListView.builder(
             shrinkWrap: true,
             physics: const BouncingScrollPhysics(),
-            itemCount: 20,
+            itemCount: 4,
             itemBuilder: (BuildContext context, int index) {
               return const Test();
             })
