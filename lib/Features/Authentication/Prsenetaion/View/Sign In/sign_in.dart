@@ -1,8 +1,7 @@
+import 'package:clinic_square/Core/Helpers/app_screen.dart';
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_main_button.dart';
-import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/header_text.dart';
-import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/forget_passwrod_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/no_account_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/sign_in_form.dart';
@@ -10,15 +9,12 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 
-class SignIn extends StatelessWidget {
-  const SignIn({super.key});
+class SignInView extends StatelessWidget {
+  const SignInView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: AppScrollWidget(
-            child: AppPadding(
+    return AppScreen(
                 child: Column(
           children: [
             Space.topSpace40,
@@ -35,8 +31,7 @@ class SignIn extends StatelessWidget {
             Space.verticalSpace24,
             const NoAccountText()
           ],
-        ))),
-      ),
-    );
+        ));
+    
   }
 }

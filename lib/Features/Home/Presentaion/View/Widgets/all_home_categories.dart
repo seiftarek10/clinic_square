@@ -32,7 +32,9 @@ class AllHomeGategroies extends StatelessWidget {
         HomeCategory(
           categoryIcon: Assets.pharmacyIcon,
           category: 'Pharmacy',
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(Routes.ePharmacy);
+          },
         ),
         HomeCategory(
           categoryIcon: Assets.homeVisitIcon,
