@@ -9,8 +9,8 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/book_appoinment.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctor_details.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctors_consultation.dart';
+import 'package:clinic_square/Features/ELab/Presentaion/Views/elab.dart';
 import 'package:clinic_square/Features/ELab/Presentaion/Views/elab_book_view.dart';
-import 'package:clinic_square/Features/ELab/elab.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:go_router/go_router.dart';
 
