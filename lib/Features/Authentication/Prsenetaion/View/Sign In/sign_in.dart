@@ -1,8 +1,7 @@
+import 'package:clinic_square/Core/Helpers/app_screen.dart';
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Widgets/app_main_button.dart';
-import 'package:clinic_square/Core/Widgets/app_padding.dart';
 import 'package:clinic_square/Core/Widgets/header_text.dart';
-import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/forget_passwrod_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/no_account_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/sign_in_form.dart';
@@ -15,10 +14,7 @@ class SignInView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SafeArea(
-      child: Scaffold(
-        body: AppScrollWidget(
-            child: AppPadding(
+    return AppScreen(
                 child: Column(
           children: [
             Space.topSpace40,
@@ -35,8 +31,7 @@ class SignInView extends StatelessWidget {
             Space.verticalSpace24,
             const NoAccountText()
           ],
-        ))),
-      ),
-    );
+        ));
+    
   }
 }
