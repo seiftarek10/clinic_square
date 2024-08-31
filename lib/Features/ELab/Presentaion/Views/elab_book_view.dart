@@ -5,6 +5,7 @@ import 'package:clinic_square/Core/Widgets/header_bar.dart';
 import 'package:clinic_square/Core/Widgets/scrollable_widget.dart';
 import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/elab_location.dart';
 import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/elab_work_days.dart';
+import 'package:clinic_square/Features/ELab/Presentaion/Views/Widgets/select_tests.dart';
 import 'package:flutter/material.dart';
 
 class ElabBookView extends StatelessWidget {
@@ -12,23 +13,24 @@ class ElabBookView extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return  SafeArea(
+    return SafeArea(
       child: Scaffold(
-        body: AppScrollWidget(child: 
-        AppPadding(child: 
-        Column(
+        body: AppScrollWidget(
+            child: AppPadding(
+                child: Column(
+          crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Space.topSpace20,
             const HeaderBar(headerText: "Lab Name"),
             Space.verticalSpace24,
             const ELabLocation(),
             const AppDivider(height: 35),
-            const ELabWorkDays()
-            
+            const ELabWorkDays(),
+            const AppDivider(height: 35),
+            const SelectTests()
           ],
         ))),
       ),
     );
   }
 }
-
