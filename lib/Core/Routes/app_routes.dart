@@ -9,6 +9,8 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/book_appoinment.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctor_details.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctors_consultation.dart';
+import 'package:clinic_square/Features/ELab/Presentaion/Views/elab.dart';
+import 'package:clinic_square/Features/ELab/Presentaion/Views/elab_book_view.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:go_router/go_router.dart';
 
@@ -40,8 +42,10 @@ final appRouter = GoRouter(
     GoRoute(
         path: Routes.doctorDetails,
         builder: (context, state) => const DoctorDetailsPage()),
-    GoRoute(path: Routes.bookAppoinment,
-    builder: (context, state) => const BookAppoinmentView(),
-    )
+    GoRoute(
+        path: Routes.bookAppoinment,
+        builder: (context, state) => const BookAppoinmentView()),
+    GoRoute(path: Routes.eLab, builder: (context, state) => const Elab()),
+    GoRoute(path: Routes.eLabBookView, builder: (context, state) => const ElabBookView()),
   ],
 );

@@ -11,8 +11,8 @@ class AllHomeGategroies extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Wrap(
-      runSpacing: 20.w,
-      spacing: 10.h,
+      runSpacing: 20.h,
+      spacing: 10.w,
       direction: Axis.horizontal,
       children: [
         HomeCategory(
@@ -25,7 +25,9 @@ class AllHomeGategroies extends StatelessWidget {
         HomeCategory(
           categoryIcon: Assets.labIcon,
           category: 'Lab',
-          onTap: () {},
+          onTap: () {
+            GoRouter.of(context).push(Routes.eLab);
+          },
         ),
         HomeCategory(
           categoryIcon: Assets.pharmacyIcon,

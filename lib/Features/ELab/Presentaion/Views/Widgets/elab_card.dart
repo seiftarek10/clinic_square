@@ -2,21 +2,17 @@ import 'package:clinic_square/Core/Routes/routes_path_key.dart';
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:clinic_square/Core/utils/assets.dart';
-import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-
 import 'package:flutter/material.dart';
-
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:go_router/go_router.dart';
 
-class DoctorCard extends StatelessWidget {
-  const DoctorCard({super.key, required this.isClickable});
-  final bool isClickable;
+class ElabCard extends StatelessWidget {
+  const ElabCard({super.key});
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 126.h,
+      height: 110.h,
       width: 343.w,
       child: Row(
         crossAxisAlignment: CrossAxisAlignment.start,
@@ -37,9 +33,10 @@ class DoctorCard extends StatelessWidget {
           Expanded(
               flex: 7,
               child: Column(
+                mainAxisAlignment: MainAxisAlignment.start,
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  SizedBox(height: 4.h),
+                  SizedBox(height: 6.h),
                   Text("Dr.Seif Tariq Maher",
                       style: Fonts.font16_600DarkBlue
                           .copyWith(overflow: TextOverflow.ellipsis)),
@@ -48,29 +45,17 @@ class DoctorCard extends StatelessWidget {
                       maxLines: 2,
                       style: Fonts.font14_300DarkBlue
                           .copyWith(overflow: TextOverflow.ellipsis)),
-                  // SizedBox(height: 6.h),
-                  Row(
-                    children: [
-                      const Icon(EvaIcons.star, color: Colors.orange),
-                      SizedBox(width: 4.w),
-                      const Text('4.8 (4.279 reviews)'),
-                    ],
-                  ),
-                  isClickable == true
-                      ? Align(
-                          alignment: Alignment.bottomRight,
-                          child: ElevatedButton(
-                              onPressed: () {
-                                isClickable == true
-                                    ? GoRouter.of(context)
-                                        .push(Routes.doctorDetails)
-                                    : null;
-                              },
-                              style: ElevatedButton.styleFrom(
-                                  backgroundColor: AppColors.mainBlue),
-                              child:
-                                  Text("Book", style: Fonts.font12_300White)))
-                      : const SizedBox.shrink()
+                  Align(
+                      alignment: Alignment.bottomRight,
+                      child: ElevatedButton(
+                          onPressed: () {
+                          
+                            GoRouter.of(context).push(Routes.eLabBookView);
+                          },
+                          style: ElevatedButton.styleFrom(
+                              // padding: EdgeInsets.zero,
+                              backgroundColor: AppColors.mainBlue),
+                          child: Text("Book", style: Fonts.font12_300White)))
                 ],
               ))
         ],
