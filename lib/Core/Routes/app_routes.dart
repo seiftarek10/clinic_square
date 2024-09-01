@@ -59,6 +59,7 @@ final appRouter = GoRouter(
         builder: (context, state) => const EPharmacyView()),
     GoRoute(
         path: Routes.ePharmacyInfo,
-        builder: (context, state) => const EPharmacyInfoView())
+        builder: (context, state) => const EPharmacyInfoView()),
+   
   ],
 );
