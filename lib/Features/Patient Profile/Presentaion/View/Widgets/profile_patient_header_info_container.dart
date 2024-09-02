@@ -1,13 +1,15 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
-import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PatientProfileHeaderInfoContainer extends StatelessWidget {
   const PatientProfileHeaderInfoContainer({
-    super.key,
+    super.key, required this.userName, required this.phoneNumber, required this.image,
   });
+
+  final String userName,phoneNumber,image;
+  
 
   @override
   Widget build(BuildContext context) {
@@ -19,10 +21,10 @@ class PatientProfileHeaderInfoContainer extends StatelessWidget {
           borderRadius: BorderRadius.circular(14)),
       child: Row(
         children: [
-          const Expanded(
+           Expanded(
             child: CircleAvatar(
               radius: 40,
-              backgroundImage: AssetImage(Assets.doctorImageIcon),
+              backgroundImage: AssetImage(image),
             ),
           ),
           SizedBox(width: 6.w),
@@ -33,15 +35,15 @@ class PatientProfileHeaderInfoContainer extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    "Seif Tariq Maher",
+                    userName,
                     style: Fonts.font16_600DarkBlue,
                   ),
                   Text(
-                    "01027870171",
-                    style: Fonts.font14_300DarkBlue,
+                    phoneNumber,
+                    style: Fonts.font14_400DarkBlue,
                   ),
                 ],
-              ))
+              )),
         ],
       ),
     );
