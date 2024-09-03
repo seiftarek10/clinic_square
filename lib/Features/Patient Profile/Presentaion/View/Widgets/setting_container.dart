@@ -66,7 +66,11 @@ class _SettingContainerState extends State<SettingContainer> {
                 settingModel: settings[1],
                 validator: ValidationForm.validPassword,
                 onTap: (isEdit) {
-                  _editHanle(isEdit, 1, settings[1].expansionTileController,);
+                  _editHanle(
+                    isEdit,
+                    1,
+                    settings[1].expansionTileController,
+                  );
                 }),
             SettingWidget(
                 controller: settings[2].expansionTileController,
@@ -74,7 +78,11 @@ class _SettingContainerState extends State<SettingContainer> {
                     ValidationForm.nullOrEmptyValidation(address, "Address"),
                 settingModel: settings[2],
                 onTap: (isEdit) {
-                  _editHanle(isEdit, 2, settings[2].expansionTileController,);
+                  _editHanle(
+                    isEdit,
+                    2,
+                    settings[2].expansionTileController,
+                  );
                 }),
             SettingWidget(
                 controller: settings[3].expansionTileController,
