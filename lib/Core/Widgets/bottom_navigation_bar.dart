@@ -1,5 +1,6 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
+import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/patinet_profile.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomBar extends StatefulWidget {
@@ -12,17 +13,15 @@ class AppBottomBar extends StatefulWidget {
 class _AppBottomBarState extends State<AppBottomBar> {
   int _selectedIndex = 0;
 
-  static  final List<Widget> _pages =  <Widget>[
+  static final List<Widget> _pages = <Widget>[
     const HomePage(),
     const Center(
-    child: Text("Center"),
+      child: Text("Center"),
     ),
     const Text(
       'Index 2: School',
     ),
-     const Text(
-      'Index 2: School',
-    ),
+    const PatinetProfileView()
   ];
 
   void _onItemTapped(int index) {
@@ -36,7 +35,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
     return Scaffold(
       body: _pages.elementAt(_selectedIndex),
       bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed, 
+        type: BottomNavigationBarType.fixed,
         elevation: 16,
         items: const <BottomNavigationBarItem>[
           BottomNavigationBarItem(
@@ -51,7 +50,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
             icon: Icon(Icons.volunteer_activism),
             label: 'Activity',
           ),
-             BottomNavigationBarItem(
+          BottomNavigationBarItem(
             icon: Icon(Icons.person),
             label: 'Profile',
           ),
@@ -59,9 +58,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
         currentIndex: _selectedIndex,
         selectedItemColor: AppColors.mainBlue,
         selectedFontSize: 18,
-        selectedIconTheme: const IconThemeData(
-          size: 35
-        ),
+        selectedIconTheme: const IconThemeData(size: 35),
         onTap: _onItemTapped,
       ),
     );

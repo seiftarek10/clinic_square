@@ -22,6 +22,11 @@ class _SignupFormState extends State<SignupForm> {
 
   TextEditingController controller = TextEditingController();
   TextEditingController controller1 = TextEditingController();
+  TextEditingController controller2 = TextEditingController();
+  TextEditingController controller3 = TextEditingController();
+  TextEditingController controller4 = TextEditingController();
+  TextEditingController controller5 = TextEditingController();
+  TextEditingController controller6 = TextEditingController();
   final _formKey = GlobalKey<FormState>();
   @override
   Widget build(BuildContext context) {
@@ -32,18 +37,14 @@ class _SignupFormState extends State<SignupForm> {
           AppTextField(
             hintText: 'Name',
             icon: Icons.person,
-            controller: TextEditingController(),
-            validator: (value) {
-              return ValidationForm.nullOrEmptyValidation(value, "Name");
-            },
+            controller: controller,
+            validator: (name)=> ValidationForm.nullOrEmptyValidation(name, "Name"),
           ),
           AppTextField(
             hintText: 'Email',
             icon: Icons.email,
-            controller: TextEditingController(),
-            validator: (value) {
-              return "";
-            },
+            controller: controller1,
+            validator: ValidationForm.validEmail,
           ),
           AppTextField(
             hintText: 'Password',
@@ -56,10 +57,8 @@ class _SignupFormState extends State<SignupForm> {
                 showPassword = !showPassword;
               });
             },
-            controller: controller,
-            validator: (value) {
-              return "";
-            },
+            controller: controller2,
+            validator: ValidationForm.validPassword,
           ),
           AppTextField(
             hintText: 'Re-Password',
@@ -73,37 +72,30 @@ class _SignupFormState extends State<SignupForm> {
                 showRePassword = !showRePassword;
               });
             },
-            controller: controller1,
-            validator: (value) {
-              return "";
-            },
+            controller: controller3,
+            validator: (rePassword)=>ValidationForm.vaildRePassword(rePassword,'123456' ),
           ),
           widget.showAgeField == false
               ? const SizedBox.shrink()
               : AppTextField(
                   hintText: 'Age',
                   icon: Icons.calendar_month,
-                  controller: TextEditingController(),
-                  validator: (value) {
-                    return "";
-                  },
+                  controller: controller6,
+                  validator: (age)=>ValidationForm.nullOrEmptyValidation(age, "Age"),
                 ),
           AppTextField(
             hintText: 'Mobile',
             icon: Icons.phone_android_rounded,
-            controller: TextEditingController(),
-            validator: (value) {
-              return "";
-            },
+            controller: controller4,
+            validator: ValidationForm.validPhoneNubmer,
           ),
           AppTextField(
             hintText: widget.location ?? "City",
             icon: Icons.location_on_sharp,
-            controller: TextEditingController(),
-            validator: (value) {
-              return "";
-            },
+            controller: controller5,
+            validator: (city)=>ValidationForm.nullOrEmptyValidation(city, "City"),
           ),
+        
         ],
       ),
     );
