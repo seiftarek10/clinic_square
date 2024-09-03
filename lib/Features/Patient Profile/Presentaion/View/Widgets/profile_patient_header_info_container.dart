@@ -5,10 +5,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class PatientProfileHeaderInfoContainer extends StatelessWidget {
   const PatientProfileHeaderInfoContainer({
-    super.key, required this.userName, required this.phoneNumber, required this.image,
+    super.key, required this.userName, required this.image,
   });
 
-  final String userName,phoneNumber,image;
+  final String userName,image;
   
 
   @override
@@ -22,6 +22,7 @@ class PatientProfileHeaderInfoContainer extends StatelessWidget {
       child: Row(
         children: [
            Expanded(
+            flex: 2,
             child: CircleAvatar(
               radius: 40,
               backgroundImage: AssetImage(image),
@@ -29,7 +30,7 @@ class PatientProfileHeaderInfoContainer extends StatelessWidget {
           ),
           SizedBox(width: 6.w),
           Expanded(
-              flex: 3,
+              flex: 5,
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.center,
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -39,7 +40,7 @@ class PatientProfileHeaderInfoContainer extends StatelessWidget {
                     style: Fonts.font16_600DarkBlue,
                   ),
                   Text(
-                    phoneNumber,
+                    "Patinet",
                     style: Fonts.font14_400DarkBlue,
                   ),
                 ],

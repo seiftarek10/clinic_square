@@ -5,7 +5,8 @@ class SettingModel {
   bool editMoode;
   final IconData icon;
   final TextEditingController controller;
-  final String Function(String?) validator;
+  final ExpansionTileController expansionTileController ;
+
 
   SettingModel(
     {
@@ -15,7 +16,8 @@ class SettingModel {
     required this.editMoode,
     required this.icon,
     required this.controller,
-    required this.validator,
+    required this.expansionTileController
+    
     }
   );
 }

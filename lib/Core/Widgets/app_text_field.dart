@@ -11,13 +11,14 @@ class AppTextField extends StatefulWidget {
       this.suffixIcon,
       required this.controller,
       required this.validator,
-      this.onPressed, this.isSecureText});
+      this.onPressed,
+      this.isSecureText});
 
   final String hintText;
   final IconData icon;
   final IconData? suffixIcon;
   final TextEditingController controller;
-  final String Function(String?) validator;
+  final String? Function(String?) validator;
   final void Function()? onPressed;
   final bool? isSecureText;
 
@@ -53,11 +54,13 @@ class _AppTextFieldState extends State<AppTextField> {
     return Column(
       children: [
         TextFormField(
+          autovalidateMode: AutovalidateMode.onUserInteraction,
           controller: widget.controller,
           validator: widget.validator,
           focusNode: _focusNode,
-          obscureText: widget.isSecureText??false,
+          obscureText: widget.isSecureText ?? false,
           decoration: InputDecoration(
+              isDense: true,
               hintText: widget.hintText,
               hintStyle: Fonts.font18_250Lightgrey,
               prefixIcon: Icon(
@@ -67,17 +70,14 @@ class _AppTextFieldState extends State<AppTextField> {
               suffixIcon: IconButton(
                 onPressed: widget.onPressed,
                 icon: Icon(widget.suffixIcon,
-                    color: isFocused ? AppColors.mainBlue : AppColors.
-                    darkBlue),
+                    color: isFocused ? AppColors.mainBlue : AppColors.darkBlue),
               ),
               enabledBorder: borderStyle(color: AppColors.darkBlue, width: 0.7),
               focusedBorder: borderStyle(width: 1.5, color: AppColors.mainBlue),
               errorBorder: borderStyle(width: 1.5, color: Colors.red),
-              focusedErrorBorder: borderStyle(width: 1.5, color: Colors.red)
-              ),
+              focusedErrorBorder: borderStyle(width: 1.5, color: Colors.red)),
         ),
-          SizedBox(height: 10.h),
-
+        SizedBox(height: 10.h),
       ],
     );
   }
