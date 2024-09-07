@@ -1,5 +1,6 @@
 import 'package:clinic_square/Core/Helpers/controllers.dart';
 import 'package:clinic_square/Core/Helpers/validation_form.dart';
+import 'package:clinic_square/Features/Patient%20Profile/Data/Models/setting_model.dart';
 import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View%20Model/Profile%20Healper/setting_model_list.dart';
 import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/Widgets/setting_widget.dart';
 import 'package:flutter/material.dart';
@@ -54,7 +55,7 @@ class _SettingsListState extends State<SettingsList> {
         physics: const BouncingScrollPhysics(),
         itemCount: settings.settingsItemsList.length,
         itemBuilder: (context, index) {
-          final setting = settings.settingsItemsList[index];
+          final SettingModel setting = settings.settingsItemsList[index];
           return SettingWidget(
             controller: setting.expansionTileController,
             settingModel: setting,
