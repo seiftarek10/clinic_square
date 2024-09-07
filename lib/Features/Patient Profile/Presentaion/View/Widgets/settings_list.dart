@@ -13,7 +13,7 @@ class SettingsList extends StatefulWidget {
 }
 
 class _SettingsListState extends State<SettingsList> {
-  final _formKey = GlobalKey<FormState>();
+  final _formKeys = List.generate(4, (_) => GlobalKey<FormState>());
   late Settings settings;
   late TextFormControllers controllers;
 
@@ -30,82 +30,48 @@ class _SettingsListState extends State<SettingsList> {
     controllers.dispose();
   }
 
-  void _editHanle(bool isEdit, int index, ExpansionTileController controller) {
-    isEdit == true
-        ? {
-            setState(() {
-              settings.settingsItemsList[index].editMoode = isEdit;
-            })
-          }
-        : {
-            if (_formKey.currentState!.validate())
-              {
-                setState(() {
-                  settings.settingsItemsList[index].editMoode = isEdit;
-                }),
-              }
-            else
-              {controller.expand()}
-          };
+  void _editHandle(bool isEdit, int index, ExpansionTileController controller) {
+    if (isEdit) {
+      setState(() {
+        settings.settingsItemsList[index].editMoode = isEdit;
+      });
+    } else {
+      if (_formKeys[index].currentState!.validate()) {
+        setState(() {
+          settings.settingsItemsList[index].editMoode = isEdit;
+        });
+      } else {
+        controller.expand();
+      }
+    }
   }
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
       height: 350.h,
-      child: Form(
-        key: _formKey,
-        child: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-
-          child: Column(
-            children: [
-              SettingWidget(
-                  controller:
-                      settings.settingsItemsList[0].expansionTileController,
-                  settingModel: settings.settingsItemsList[0],
-                  validator: ValidationForm.validEmail,
-                  onTap: (isEdit) {
-                    _editHanle(isEdit, 0,
-                        settings.settingsItemsList[0].expansionTileController);
-                  }),
-              SettingWidget(
-                  controller:
-                      settings.settingsItemsList[1].expansionTileController,
-                  settingModel: settings.settingsItemsList[1],
-                  validator: ValidationForm.validPassword,
-                  onTap: (isEdit) {
-                    _editHanle(
-                      isEdit,
-                      1,
-                      settings.settingsItemsList[1].expansionTileController,
-                    );
-                  }),
-              SettingWidget(
-                  controller:
-                      settings.settingsItemsList[2].expansionTileController,
-                  validator: (address) =>
-                      ValidationForm.nullOrEmptyValidation(address, "Address"),
-                  settingModel: settings.settingsItemsList[2],
-                  onTap: (isEdit) {
-                    _editHanle(
-                      isEdit,
-                      2,
-                      settings.settingsItemsList[2].expansionTileController,
-                    );
-                  }),
-              SettingWidget(
-                  controller:
-                      settings.settingsItemsList[3].expansionTileController,
-                  settingModel: settings.settingsItemsList[3],
-                  validator: ValidationForm.validPhoneNubmer,
-                  onTap: (isEdit) {
-                    _editHanle(isEdit, 3,
-                        settings.settingsItemsList[3].expansionTileController);
-                  }),
-            ],
-          ),
-        ),
+      child: ListView.builder(
+        physics: const BouncingScrollPhysics(),
+        itemCount: settings.settingsItemsList.length,
+        itemBuilder: (context, index) {
+          final setting = settings.settingsItemsList[index];
+          return SettingWidget(
+            controller: setting.expansionTileController,
+            settingModel: setting,
+            validator: index == 0
+                ? ValidationForm.validEmail
+                : index == 1
+                    ? ValidationForm.validPassword
+                    : index == 2
+                        ? (address) => ValidationForm.nullOrEmptyValidation(
+                            address, "Address")
+                        : ValidationForm.validPhoneNubmer,
+            formKey: _formKeys[index],
+            onTap: (isEdit) {
+              _editHandle(isEdit, index, setting.expansionTileController);
+            },
+          );
+        },
       ),
     );
   }
