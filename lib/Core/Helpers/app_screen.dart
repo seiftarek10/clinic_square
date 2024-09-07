@@ -9,11 +9,20 @@ class AppScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        body: SingleChildScrollView(
-            physics: const BouncingScrollPhysics(),
-            child: Padding(
-                padding: EdgeInsets.symmetric(horizontal: 16.w), child: child)),
-      ),
+          body: TweenAnimationBuilder(
+        duration: const Duration(milliseconds: 300),
+        tween: Tween<double>(begin: 0, end: 1),
+        builder: (context, value, childd) {
+          return Opacity(
+            opacity: value,
+            child: SingleChildScrollView(
+                physics: const BouncingScrollPhysics(),
+                child: Padding(
+                    padding: EdgeInsets.symmetric(horizontal: 16.w),
+                    child: child)),
+          );
+        },
+      )),
     );
   }
 }

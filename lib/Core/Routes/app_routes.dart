@@ -14,6 +14,7 @@ import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab_book_view.da
 import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy.dart';
 import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy_info.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/patient_activity.dart';
 import 'package:go_router/go_router.dart';
 
 // GoRouter configuration
@@ -59,6 +60,9 @@ final appRouter = GoRouter(
         builder: (context, state) => const EPharmacyView()),
     GoRoute(
         path: Routes.ePharmacyInfo,
-        builder: (context, state) => const EPharmacyInfoView())
+        builder: (context, state) => const EPharmacyInfoView()),
+    GoRoute(path: Routes.patientActivity,
+    builder: (context,state)=>const PatientActivity()
+    )
   ],
 );

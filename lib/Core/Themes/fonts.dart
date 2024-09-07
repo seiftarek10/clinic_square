@@ -16,12 +16,16 @@ abstract class Fonts {
       fontSize: 14.sp, fontWeight: FontWeight.w300, color: AppColors.darkBlue);
     static TextStyle font14_500DarkBlue = GoogleFonts.inter(
       fontSize: 14.sp, fontWeight: FontWeight.w500, color: AppColors.darkBlue);
+        static TextStyle font14_400DarkBlue = GoogleFonts.inter(
+      fontSize: 14.sp, fontWeight: FontWeight.w400, color: AppColors.darkBlue);
   static TextStyle font12_300DarkBlue = GoogleFonts.inter(
       fontSize: 12.sp, fontWeight: FontWeight.w300, color: AppColors.darkBlue);
     static TextStyle font12_300White = GoogleFonts.inter(
       fontSize: 12.sp, fontWeight: FontWeight.w300, color:Colors.white);
   static TextStyle font16_600DarkBlue = GoogleFonts.inter(
       fontSize: 16.sp, fontWeight: FontWeight.w600, color: AppColors.darkBlue);
+    static TextStyle font18_600DarkBlue = GoogleFonts.inter(
+      fontSize: 18.sp, fontWeight: FontWeight.w600, color: AppColors.darkBlue);
   static TextStyle font16_600White = GoogleFonts.inter(
       fontSize: 16.sp, fontWeight: FontWeight.w600, color: Colors.white);
   static TextStyle font16_400DarkBlue = GoogleFonts.inter(
