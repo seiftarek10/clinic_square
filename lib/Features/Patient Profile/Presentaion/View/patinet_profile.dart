@@ -24,7 +24,7 @@ class PatinetProfileView extends StatelessWidget {
         ),
         Space.verticalSpace24,
         const SettingContainer(),
-        Space.verticalSpace145,
+        Space.verticalSpace12,
         Center(child: Text("Deveolped By @ Seif Tariq ", style: Fonts.font14_400DarkBlue))
       ],
     ));

@@ -19,7 +19,7 @@ import 'package:go_router/go_router.dart';
 // GoRouter configuration
 final appRouter = GoRouter(
   routes: [
-    GoRoute(path: '/', builder: (context, state) => const AppBottomBar()),
+    GoRoute(path: '/', builder: (context, state) => const SignUpAsView()),
     GoRoute(
         path: Routes.singUpAs,
         builder: (context, state) => const SignUpAsView()),
