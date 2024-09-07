@@ -8,5 +8,6 @@ abstract class Space {
   static SizedBox verticalSpace12 = SizedBox(height: 12.h);
   static SizedBox verticalSpace18 = SizedBox(height: 18.h);
   static SizedBox verticalSpace24 = SizedBox(height: 24.h);
+  static SizedBox verticalSpace30 = SizedBox(height: 30.h);
   static SizedBox verticalSpace50 = SizedBox(height: 50.h);
 }

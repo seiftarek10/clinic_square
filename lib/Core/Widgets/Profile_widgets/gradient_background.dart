@@ -17,7 +17,8 @@ class GradientBackground extends StatelessWidget {
           gradient: LinearGradient(
               colors: [AppColors.mainBlue, Colors.white],
               begin: Alignment.topCenter,
-              end: Alignment.bottomCenter
+              end: Alignment.center,
+              
               // transform: GradientRotation(1)
               )),
       child: child

@@ -1,5 +1,6 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/patient_activity.dart';
 import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/patinet_profile.dart';
 import 'package:flutter/material.dart';
 
@@ -16,13 +17,9 @@ class _AppBottomBarState extends State<AppBottomBar> {
   static final List<Widget> _pages = <Widget>[
     const HomePage(),
     const Center(
-      child: Text("Center"),
-    ),
-    const Center(
-      child: Text(
-        'Index 2: School',
-      ),
-    ),
+      child : Text("Center"),
+    ), 
+    const PatientActivity(),
     const PatinetProfileView()
   ];
 

@@ -4,24 +4,32 @@ import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/Widget
 
 import 'package:flutter/material.dart';
 
-
 class PatinetProfileView extends StatelessWidget {
   const PatinetProfileView({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const SafeArea(
+    return  SafeArea(
         child: Scaffold(
-      body: GradientBackground(
-        child: SingleChildScrollView(
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
-            children: [
-              ProfileHeaderText(),
-              SettingsContainer(),
-            ],
-          ),
-        ),
+      body: TweenAnimationBuilder(
+        duration: const Duration(milliseconds: 300),
+        tween: Tween<double>(begin: 0, end: 1),
+        builder: (context, value, child) {
+          return Opacity(
+            opacity: value,
+            child: const GradientBackground(
+              child: SingleChildScrollView(
+                child: Column(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    ProfileHeaderText(),
+                    SettingsContainer(),
+                  ],
+                ),
+              ),
+            ),
+          );
+        },
       ),
     ));
   }
