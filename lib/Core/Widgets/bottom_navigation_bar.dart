@@ -3,6 +3,7 @@ import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/patinet_profile.dart';
 import 'package:flutter/material.dart';
 
+
 class AppBottomBar extends StatefulWidget {
   const AppBottomBar({super.key});
 
@@ -18,8 +19,10 @@ class _AppBottomBarState extends State<AppBottomBar> {
     const Center(
       child: Text("Center"),
     ),
-    const Text(
-      'Index 2: School',
+    const Center(
+      child: Text(
+        'Index 2: School',
+      ),
     ),
     const PatinetProfileView()
   ];
@@ -33,34 +36,63 @@ class _AppBottomBarState extends State<AppBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: _pages.elementAt(_selectedIndex),
-      bottomNavigationBar: BottomNavigationBar(
-        type: BottomNavigationBarType.fixed,
-        elevation: 16,
-        items: const <BottomNavigationBarItem>[
-          BottomNavigationBarItem(
-            icon: Icon(Icons.home_filled),
-            label: 'Home',
+      body: Stack(children: [
+        
+        _pages.elementAt(_selectedIndex),
+        Positioned(
+          bottom: 20,
+          right: 20,
+          left: 20,
+          child:
+        Container(
+        decoration: BoxDecoration(
+          color: Colors.blue,
+          borderRadius: BorderRadius.circular(70),
+          boxShadow:  [
+            BoxShadow(
+              color: Colors.grey[500]!,
+              blurRadius: 10,
+              offset: const Offset(0,2)
+            )
+          ]
+        ),
+        child: ClipRRect(
+          borderRadius: const BorderRadius.all(Radius.circular(70)),
+          child: BottomNavigationBar(
+            type: BottomNavigationBarType.fixed,
+            elevation: 16,
+            items: const <BottomNavigationBarItem>[
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home_filled),
+                label: 'Home',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.message),
+                label: 'Forum',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.volunteer_activism),
+                label: 'Activity',
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.person),
+                label: 'Profile',
+              ),
+            ],
+            currentIndex: _selectedIndex,
+            selectedItemColor: AppColors.mainBlue,
+            selectedFontSize: 18,
+            selectedIconTheme: const IconThemeData(size: 35),
+            onTap: _onItemTapped,
           ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.message),
-            label: 'Forum',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.volunteer_activism),
-            label: 'Activity',
-          ),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.person),
-            label: 'Profile',
-          ),
-        ],
-        currentIndex: _selectedIndex,
-        selectedItemColor: AppColors.mainBlue,
-        selectedFontSize: 18,
-        selectedIconTheme: const IconThemeData(size: 35),
-        onTap: _onItemTapped,
-      ),
-    );
+        ),
+      ),)
+        ]),
+
+      //   bottomNavigationBar: 
+    
+
+      );
+    // );
   }
 }
