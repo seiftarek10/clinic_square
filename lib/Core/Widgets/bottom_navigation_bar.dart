@@ -35,6 +35,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+          resizeToAvoidBottomInset: false,
+
       body: Stack(children: [
         _pages.elementAt(_selectedIndex),
         Positioned(
