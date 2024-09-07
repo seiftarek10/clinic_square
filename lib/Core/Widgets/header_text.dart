@@ -1,5 +1,5 @@
-import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
+import 'package:clinic_square/Core/Widgets/gradient_text.dart';
 import 'package:flutter/material.dart';
 
 class HeaderText extends StatelessWidget {
@@ -10,9 +10,7 @@ class HeaderText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Text(title,
-            style:
-                Fonts.font40_700mainBlue.copyWith(color: AppColors.mainBlue)),
+        GradientText(title),
         Text(
           subTitle,
           style: Fonts.font14_300DarkBlue,

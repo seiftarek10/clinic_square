@@ -9,13 +9,15 @@ class SettingWidget extends StatelessWidget {
     super.key,
     required this.settingModel,
     required this.onTap,
-    this.controller, required this.validator,
+    this.controller,
+    required this.validator, required this.formKey,
   });
 
   final SettingModel settingModel;
   final void Function(bool) onTap;
   final ExpansionTileController? controller;
   final String? Function(String?) validator;
+  final GlobalKey<FormState> formKey;
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +37,15 @@ class SettingWidget extends StatelessWidget {
           : const Icon(Icons.edit),
       onExpansionChanged: onTap,
       children: [
-        AppTextField(
+        Form(
+          key: formKey,
+          child: AppTextField(
             hintText: settingModel.settingValue,
             icon: settingModel.icon,
             controller: settingModel.controller,
-            validator: validator,)
+            validator: validator,
+          ),
+        )
       ],
     );
   }
