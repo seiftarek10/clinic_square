@@ -16,4 +16,9 @@ abstract class Assets {
   static const String dateIcon = 'assets/images/svgs/date.svg';
   static const String attachIcon = 'assets/images/svgs/attach.svg';
   static const String fileIcon = 'assets/images/svgs/file.svg';
+  static const String consultationActivity =
+      'assets/images/pngs/consultation_acitvity.png';
+  static const String labActivity = 'assets/images/pngs/lab_activity.png';
+  static const String pharmacyActivity =
+      'assets/images/pngs/pharmacy_activity.png';
 }
