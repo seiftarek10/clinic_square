@@ -27,7 +27,7 @@ class ElabBookView extends StatelessWidget {
         const ELabWorkDays(),
         const AppDivider(height: 35),
         Space.verticalSpace12,
-        const SelectTests.SelectTestsListView(),
+        const SelectTests(),
         AppButton(onPressed: () {}, text: "Book"),
         Space.verticalSpace12
       ],
