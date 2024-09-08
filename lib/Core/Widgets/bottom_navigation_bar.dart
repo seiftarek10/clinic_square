@@ -17,9 +17,9 @@ class _AppBottomBarState extends State<AppBottomBar> {
   static final List<Widget> _pages = <Widget>[
     const HomePage(),
     const Center(
-      child : Text("Center"),
-    ), 
-    const PatientActivity(),
+      child: Text("Center"),
+    ),
+    const PatientActivityView(),
     const PatinetProfileView()
   ];
 
@@ -32,7 +32,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-          resizeToAvoidBottomInset: false,
+      resizeToAvoidBottomInset: false,
 
       body: Stack(children: [
         _pages.elementAt(_selectedIndex),

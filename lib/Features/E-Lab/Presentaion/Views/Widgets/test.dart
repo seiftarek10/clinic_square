@@ -1,6 +1,6 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
-import 'package:clinic_square/Core/Widgets/animated_selection.dart';
+import 'package:clinic_square/Core/Widgets/Animation/animated_selection.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:flutter/material.dart';
 

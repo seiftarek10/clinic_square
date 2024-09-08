@@ -6,8 +6,8 @@ import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/Widgets/activity_category.dart';
 import 'package:flutter/material.dart';
 
-class PatientActivity extends StatelessWidget {
-  const PatientActivity({super.key});
+class PatientActivityView extends StatelessWidget {
+  const PatientActivityView({super.key});
 
   @override
   Widget build(BuildContext context) {

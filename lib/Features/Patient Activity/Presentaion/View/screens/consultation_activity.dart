@@ -2,8 +2,8 @@ import 'package:clinic_square/Core/Widgets/app_tab_bar.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/Widgets/appoinments_list_view.dart';
 import 'package:flutter/material.dart';
 
-class ConsultationActivity extends StatelessWidget {
-  const ConsultationActivity({super.key});
+class ConsultationActivityView extends StatelessWidget {
+  const ConsultationActivityView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,7 +14,6 @@ class ConsultationActivity extends StatelessWidget {
       tabsView: [
         AppoinmentsListView(),
         AppoinmentsListView(),
-        
       ],
     );
   }

@@ -23,13 +23,13 @@ class LocationWidget extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 6.w),
+        SizedBox(width: 12.w),
         Expanded(
           flex: 7,
           child: Text(location,
               maxLines: 2,
               overflow: TextOverflow.ellipsis,
-              style: Fonts.font16_600DarkBlue),
+              style: Fonts.font18_600DarkBlue),
         )
       ],
     );
