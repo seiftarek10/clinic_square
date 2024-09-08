@@ -4,7 +4,7 @@ import 'package:clinic_square/Features/E-Lab/Presentaion/Views/Widgets/test.dart
 import 'package:flutter/material.dart';
 
 class SelectTests extends StatefulWidget {
-  const SelectTests.SelectTestsListView({super.key});
+  const SelectTests({super.key});
 
   @override
   State<SelectTests> createState() => _SelectTestsState();
