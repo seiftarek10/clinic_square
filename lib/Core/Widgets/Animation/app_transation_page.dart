@@ -5,7 +5,7 @@ CustomTransitionPage<void> slideTransitionPageBuilder(BuildContext context, GoRo
   return CustomTransitionPage<void>(
     key: state.pageKey,
     child: child,
-    transitionDuration: const Duration(milliseconds: 300),
+    transitionDuration: const Duration(milliseconds: 230),
     transitionsBuilder: (context, animation, secondaryAnimation, child) {
       const begin = Offset(1.0, 0.0);
       const end = Offset.zero;

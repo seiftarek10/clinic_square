@@ -1,56 +1,62 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
+import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ActivityCard extends StatelessWidget {
-  const ActivityCard(
-      {super.key,
-      required this.cardPhoto,
-      required this.cardTitle,
-      this.needPhotoPadding});
+  const ActivityCard({super.key});
 
-  final String cardPhoto, cardTitle;
-  final bool? needPhotoPadding;
   @override
   Widget build(BuildContext context) {
-    return Container(
-        height: 130.h,
-        decoration: BoxDecoration(
-          boxShadow: [
-            BoxShadow(
-              blurRadius: 10,
-              color: Colors.grey[800]!,
-              spreadRadius: 0.7,
-            )
-          ],
-          gradient: LinearGradient(
-            colors: [AppColors.mainBlue, Colors.white],
-            transform: const GradientRotation(3),
-          ),
-          borderRadius: BorderRadius.circular(20),
-        ),
-        child: Row(
+    return SizedBox(
+      height: 125.h,
+      width: 343.w,
+      child: Row(
+        crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-        Expanded(
-      child: Padding(
-    padding: needPhotoPadding == true
-        ? const EdgeInsets.only(left: 6, bottom: 1)
-        : EdgeInsets.zero,
-    child: Image.asset(cardPhoto, fit: BoxFit.cover),
-        )),
-        Expanded(
-      flex: 2,
-      child: Padding(
-          padding: EdgeInsets.only(left: 16.w),
-          child: Text(
-            cardTitle,
-            style: Fonts.font24_700mainBlue
-                .copyWith(color: Colors.white),
-          )))
+          Expanded(
+            flex: 4,
+            child: SizedBox(
+              height: double.infinity,
+              child: AspectRatio(
+                  aspectRatio: 1,
+                  child: ClipRRect(
+                      borderRadius: BorderRadius.circular(15),
+                      child: Image.asset(Assets.doctorImageIcon,
+                          fit: BoxFit.cover))),
+            ),
+          ),
+          SizedBox(width: 16.w),
+          Expanded(
+              flex: 7,
+              child: Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
+                children: [
+                  SizedBox(height: 4.h),
+                  Text("Dr.Seif Tariq Maher",
+                      style: Fonts.font16_600DarkBlue
+                          .copyWith(overflow: TextOverflow.ellipsis)),
+                  SizedBox(height: 6.h),
+                  Text('General | RSUD Gatot Subroto',
+                      maxLines: 2,
+                      style: Fonts.font14_400DarkBlue
+                          .copyWith(overflow: TextOverflow.ellipsis)),
+                  SizedBox(height: 4.h),
+                  Text('2024 5 October', style: Fonts.font14_500DarkBlue),
+                  Align(
+                    
+                      alignment: Alignment.bottomRight,
+                      child: TextButton(
+                        
+                          onPressed: () {},
+                          child: Text("View",
+                              style: Fonts.font14_400DarkBlue
+                                  .copyWith(color: AppColors.mainBlue))))
+                ],
+              ))
         ],
-      ));
+      ),
+    );
   }
 }
-
-
