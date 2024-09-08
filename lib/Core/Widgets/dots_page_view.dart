@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:smooth_page_indicator/smooth_page_indicator.dart';
 
+
 class DotsPageView extends StatefulWidget {
   const DotsPageView({super.key, required this.test});
 
