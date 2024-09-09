@@ -1,8 +1,9 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
+import 'package:clinic_square/Core/Widgets/app_gesture_detector.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+
 
 class ActivityContainerCategory extends StatefulWidget {
   const ActivityContainerCategory(
@@ -21,41 +22,18 @@ class ActivityContainerCategory extends StatefulWidget {
 }
 
 class _ActivityContainerCategoryState extends State<ActivityContainerCategory> {
-  Color _color = Colors.white;
-
-  void _onTapDown(TapDownDetails details) {
-    setState(() {
-      _color = Colors.blue[100]!; // Change to red when tapped
-    });
-  }
-
-  void _onTapUp(TapUpDetails details) {
-    setState(() {
-      _color = Colors.white; // Revert back to blue after release
-    });
-  }
-
-  void _onCancel() {
-    setState(() {
-      _color = Colors.white; // Revert back to blue after release
-    });
-  }
-
+   Color _color=Colors.blue[100]!;
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTapDown: _onTapDown,
-      onTapUp: _onTapUp,
-      onLongPress: () {
+    return AppGestureDetector(
+      onTapDownColor: Colors.blue[100]!,
+      onTapUpColor: Colors.white,
+      onColorChanged: (color) {
         setState(() {
-          _color = Colors.blue[100]!;
+          _color = color;
         });
       },
-      //  onLongPressCancel: _onCancel,
-      onTapCancel: _onCancel,
-      onTap: () {
-        GoRouter.of(context).push(widget.routePage);
-      },
+      route: widget.routePage,
       child: Container(
           height: 130.h,
           decoration: BoxDecoration(
@@ -95,3 +73,4 @@ class _ActivityContainerCategoryState extends State<ActivityContainerCategory> {
     );
   }
 }
+
