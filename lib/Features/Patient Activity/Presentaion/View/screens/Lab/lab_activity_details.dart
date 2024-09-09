@@ -6,10 +6,9 @@ import 'package:clinic_square/Core/Widgets/header_bar.dart';
 import 'package:clinic_square/Core/Widgets/location_widget.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/Widgets/patient_tests.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class AppoinmentDetailsView extends StatelessWidget {
-  const AppoinmentDetailsView({super.key});
+class LabActivityDetailsView extends StatelessWidget {
+  const LabActivityDetailsView({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -17,15 +16,14 @@ class AppoinmentDetailsView extends StatelessWidget {
       child: Column(
         children: [
           Space.topSpace20,
-          const HeaderBar(headerText: 'Doctor Seif'),
-          Space.verticalSpace30,
-          const LocationWidget(location: "Giza"),
-          Space.verticalSpace12,
-          const DateWidget(date: "5 October 2014"),
-          AppDivider(height: 30.h),
+          const HeaderBar(headerText: 'Lab Name'),
+          Space.verticalSpace24,
+          const LocationWidget(location: 'Cairo'),
+          Space.verticalSpace18,
+          const DateWidget(date: 'Sunday-Friday 10:00 AM 09:00 PM'),
+          const AppDivider(),
           const PatientTests()
         ],
-      ),
-    );
+      ));
   }
 }
