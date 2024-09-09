@@ -53,6 +53,7 @@ class _AppGestureDetectorState extends State<AppGestureDetector> {
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
+      
       onTapDown: _onTapDown,
       onLongPress: _onLongPress,
       onTapUp: _onTapUp,

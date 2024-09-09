@@ -1,6 +1,6 @@
 import 'package:clinic_square/Core/Helpers/app_screen.dart';
 import 'package:clinic_square/Core/Helpers/space.dart';
-import 'package:clinic_square/Core/Widgets/app_main_button.dart';
+import 'package:clinic_square/Core/Widgets/Buttons/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/header_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/forget_passwrod_text.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/Widgets/no_account_text.dart';

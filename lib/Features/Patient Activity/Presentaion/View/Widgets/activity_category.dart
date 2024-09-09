@@ -44,10 +44,7 @@ class _ActivityContainerCategoryState extends State<ActivityContainerCategory> {
                 spreadRadius: 0.7,
               )
             ],
-            gradient: LinearGradient(
-              colors: [AppColors.mainBlue, _color],
-              transform: const GradientRotation(3),
-            ),
+            gradient: AppColors.appGradient(3,_color),
             borderRadius: BorderRadius.circular(20),
           ),
           child: Row(
