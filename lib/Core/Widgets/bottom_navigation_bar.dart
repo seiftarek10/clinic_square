@@ -42,9 +42,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
           left: 20,
           child: Container(
             decoration: BoxDecoration(
-                gradient: LinearGradient(
-                    colors: [AppColors.mainBlue, Colors.white],
-                    transform: const GradientRotation(1)),
+                gradient: AppColors.appGradient(6),
                 borderRadius: BorderRadius.circular(70),
                 boxShadow: [
                   BoxShadow(

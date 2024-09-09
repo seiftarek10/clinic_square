@@ -22,9 +22,7 @@ class AiCard extends StatelessWidget {
                 horizontal: 10.w, vertical: 16.h),
             decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(24),
-              gradient: LinearGradient(
-                  colors: [AppColors.mainBlue, Colors.white],
-                  transform: const GradientRotation(7)),
+              gradient: AppColors.appGradient(7)
             ),
             child: Column(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
