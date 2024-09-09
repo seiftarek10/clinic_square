@@ -18,8 +18,6 @@ class GradientBackground extends StatelessWidget {
               colors: [AppColors.mainBlue, Colors.white],
               begin: Alignment.topCenter,
               end: Alignment.center,
-              
-              // transform: GradientRotation(1)
               )),
       child: child
     );

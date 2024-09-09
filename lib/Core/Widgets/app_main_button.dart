@@ -14,12 +14,7 @@ class AppButton extends StatelessWidget {
       alignment: AlignmentDirectional.center,
       child: Container(
         decoration: BoxDecoration(
-          gradient: LinearGradient(
-            transform: const GradientRotation(5),
-            colors: [AppColors.mainBlue, Colors.blue[100]!],
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-          ),
+          gradient:AppColors.appGradient(5),
           borderRadius: BorderRadius.circular(20),
         ),
         child: ElevatedButton(
