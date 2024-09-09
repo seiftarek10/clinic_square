@@ -1,10 +1,9 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
-import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
+import 'package:clinic_square/Core/Widgets/Buttons/card_button.dart';
 import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class ElabCard extends StatelessWidget {
   const ElabCard({super.key});
@@ -45,17 +44,9 @@ class ElabCard extends StatelessWidget {
                       maxLines: 2,
                       style: Fonts.font14_300DarkBlue
                           .copyWith(overflow: TextOverflow.ellipsis)),
-                  Align(
-                      alignment: Alignment.bottomRight,
-                      child: ElevatedButton(
-                          onPressed: () {
-                          
-                            GoRouter.of(context).push(Routes.eLabBookView);
-                          },
-                          style: ElevatedButton.styleFrom(
-                              // padding: EdgeInsets.zero,
-                              backgroundColor: AppColors.mainBlue),
-                          child: Text("Book", style: Fonts.font12_300White)))
+                  const CardButton(
+                    routePage: Routes.eLabBookView,
+                    buttonTitle: 'Book')
                 ],
               ))
         ],

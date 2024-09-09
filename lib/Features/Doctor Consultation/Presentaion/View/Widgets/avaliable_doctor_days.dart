@@ -13,7 +13,7 @@ class AvaliableDoctorDaysList extends StatefulWidget {
 }
 
 class _AvaliableDoctorDaysListState extends State<AvaliableDoctorDaysList> {
-  int _selecedIndex = 0;
+  int _currentIndex = 0;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -26,12 +26,11 @@ class _AvaliableDoctorDaysListState extends State<AvaliableDoctorDaysList> {
             return GestureDetector(
               onTap: () {
                 setState(() {
-                  _selecedIndex = index;
+                  _currentIndex = index;
                 });
               },
               child: DayContainer(
-                index: index,
-                selectedIndex: _selecedIndex,
+                selectedIndex: _currentIndex == index,
               ),
             );
           }),
