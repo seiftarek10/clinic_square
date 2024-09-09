@@ -1,7 +1,7 @@
 import 'package:clinic_square/Core/Helpers/app_screen.dart';
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
-import 'package:clinic_square/Core/Widgets/app_main_button.dart';
+import 'package:clinic_square/Core/Widgets/Buttons/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:clinic_square/Core/Widgets/header_bar.dart';
 import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/Widgets/doctor_card.dart';

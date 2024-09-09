@@ -1,5 +1,5 @@
-import 'package:clinic_square/Core/Widgets/search_filed.dart';
-import 'package:clinic_square/Core/Widgets/filter.dart';
+import 'package:clinic_square/Core/Widgets/Search/search_filed.dart';
+import 'package:clinic_square/Core/Widgets/Search/filter.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 

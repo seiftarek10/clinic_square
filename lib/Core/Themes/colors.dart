@@ -3,9 +3,9 @@ import 'package:flutter/material.dart';
 abstract class AppColors {
   static Color mainBlue = const Color(0xff247CFF);
   static Color darkBlue = const Color(0xff27272C);
-  static LinearGradient appGradient (double rotation){
+  static LinearGradient appGradient (double rotation, [Color? color]){
     return  LinearGradient(
-      colors:  [const Color(0xff247CFF), Colors.blue[100]!],
+      colors:  [const Color(0xff247CFF), color?? Colors.blue[100]!],
       transform: GradientRotation(rotation));
   } 
   static final middleGrey = Colors.grey[500];

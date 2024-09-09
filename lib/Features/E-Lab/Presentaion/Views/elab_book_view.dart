@@ -1,6 +1,6 @@
 import 'package:clinic_square/Core/Helpers/app_screen.dart';
 import 'package:clinic_square/Core/Helpers/space.dart';
-import 'package:clinic_square/Core/Widgets/app_main_button.dart';
+import 'package:clinic_square/Core/Widgets/Buttons/app_main_button.dart';
 import 'package:clinic_square/Core/Widgets/divider.dart';
 import 'package:clinic_square/Core/Widgets/header_bar.dart';
 import 'package:clinic_square/Core/Widgets/location_widget.dart';
