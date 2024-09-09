@@ -30,30 +30,28 @@ class _DotsPageViewState extends State<DotsPageView> {
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      height: 400.h,
-      child:Column(
-        
-        children: [
-          Expanded(
-            flex: 5,
-            child: PageView.builder(
-          controller: _pageController,
-          itemCount: widget.test.length,
-          itemBuilder: (context, index) {
-            return Image.asset(widget.test[index], fit: BoxFit.cover);
-          })),
-          Expanded(child: SmoothPageIndicator(
-            effect:  WormEffect(
-                dotHeight: 12,
-                dotWidth: 12,
-                activeDotColor: AppColors.mainBlue,
-                dotColor: Colors.grey,
-              ),
-            controller: _pageController, count: widget.test.length))
-        ],
-      )
-      
-       
-    );
+        height: 400.h,
+        child: Column(
+          children: [
+            Expanded(
+                flex: 5,
+                child: PageView.builder(
+                    controller: _pageController,
+                    itemCount: widget.test.length,
+                    itemBuilder: (context, index) {
+                      return Image.asset(widget.test[index], fit: BoxFit.cover);
+                    })),
+            Expanded(
+                child: SmoothPageIndicator(
+                    effect: WormEffect(
+                      dotHeight: 12,
+                      dotWidth: 12,
+                      activeDotColor: AppColors.mainBlue,
+                      dotColor: Colors.grey,
+                    ),
+                    controller: _pageController,
+                    count: widget.test.length))
+          ],
+        ));
   }
 }

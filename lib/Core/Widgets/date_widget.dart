@@ -13,12 +13,16 @@ class DateWidget extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        SvgPicture.asset(
-          Assets.dateIcon,
-          height: 37.h,
+        Expanded(
+          child: SvgPicture.asset(
+            Assets.dateIcon,
+            height: 37.h,
+          ),
         ),
         SizedBox(width: 12.w),
-        Text(date, style: Fonts.font18_600DarkBlue),
+        Expanded(
+          flex: 7,
+          child: Text(date, style: Fonts.font16_600DarkBlue)),
       ],
     );
   }

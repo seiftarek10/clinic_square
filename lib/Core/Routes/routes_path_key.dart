@@ -17,4 +17,6 @@ abstract class Routes {
   static const String patientActivity = '/patientActivity';
   static const String consultationActivity = '/consultationActivity';
   static const String appoinmentDetails = '/appoinmentDetails';
+  static const String labActivity = '/labActivity';
+  static const String labActivityDetails = '/labActivityDetails';
 }

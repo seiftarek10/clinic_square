@@ -15,8 +15,10 @@ import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab_book_view.da
 import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy.dart';
 import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy_info.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/appoinment_details.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/consultation_activity.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Consultation/consultation_details.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Consultation/consultation_activity.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/lab_activities.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/lab_activity_details.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/patient_activity.dart';
 import 'package:go_router/go_router.dart';
 
@@ -57,7 +59,6 @@ final appRouter = GoRouter(
       pageBuilder: (context, state) =>
           slideTransitionPageBuilder(context, state, const HomePage()),
     ),
-
     GoRoute(
         path: Routes.doctorConsultation,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
@@ -100,60 +101,17 @@ final appRouter = GoRouter(
         path: Routes.consultationActivity,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
             context, state, const ConsultationActivityView())),
-        GoRoute(
+    GoRoute(
         path: Routes.appoinmentDetails,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
-            context, state, const AppoinmentDetailsView()))
-
-    // GoRoute(path: '/', builder: (context, state) => const AppBottomBar()),
-    // GoRoute(
-    //     path: Routes.singUpAs,
-    //     builder: (context, state) => const SignUpAsView()),
-    // GoRoute(
-    //     path: Routes.signUpPatient,
-    //     builder: (context, state) => const SignUpPatinetView()),
-    // GoRoute(
-    //     path: Routes.signUpDoctor,
-    //     builder: (context, state) => const SignUpDoctorView()),
-    // GoRoute(
-    //     path: Routes.signUpLab,
-    //     builder: (context, state) => const SignupLabView()),
-    // GoRoute(
-    //     path: Routes.signUpPharmacy,
-    //     builder: (context, state) => const SignUpPharmacy()),
-    // GoRoute(
-    //     path: Routes.signin, builder: (context, state) => const SignInView()),
-    // GoRoute(path: Routes.home, builder: (context, state) => const HomePage()),
-    // GoRoute(
-    //     path: Routes.bottomBar,
-    //     builder: (context, state) => const AppBottomBar()),
-    // GoRoute(
-    //     path: Routes.doctorConsultation,
-    //     pageBuilder: (context, state) => slideTransitionPageBuilder(
-    //         context, state, const DoctorsConsultaionView())),
-    // GoRoute(
-    //     path: Routes.doctorDetails,
-    //     pageBuilder: (context, state) => slideTransitionPageBuilder(
-    //         context, state, const DoctorDetailsView())),
-    // GoRoute(
-    //     path: Routes.bookAppoinment,
-    //     builder: (context, state) => const BookAppoinmentView()),
-    // GoRoute(path: Routes.eLab, builder: (context, state) => const ElabView()),
-    // GoRoute(
-    //     path: Routes.eLabBookView,
-    //     builder: (context, state) => const ElabBookView()),
-    // GoRoute(
-    //     path: Routes.ePharmacy,
-    //     builder: (context, state) => const EPharmacyView()),
-    // GoRoute(
-    //     path: Routes.ePharmacyInfo,
-    //     builder: (context, state) => const EPharmacyInfoView()),
-    // GoRoute(
-    //     path: Routes.patientActivity,
-    //     builder: (context, state) => const PatientActivity()),
-    // GoRoute(
-    //     path: Routes.consultationActivity,
-    //     pageBuilder: (context, state) => slideTransitionPageBuilder(
-    //         context, state, const ConsultationActivity()))
+            context, state, const ConsultationDetailsView())),
+    GoRoute(
+        path: Routes.labActivity,
+        pageBuilder: (context, state) => slideTransitionPageBuilder(
+            context, state, const LabActivitiesView())),
+    GoRoute(
+        path: Routes.labActivityDetails,
+        pageBuilder: (context, state) => slideTransitionPageBuilder(
+            context, state, const LabActivityDetailsView())),
   ],
 );
