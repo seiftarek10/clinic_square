@@ -3,7 +3,7 @@ import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/Widgets/home_category.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
+
 
 class AllHomeGategroies extends StatelessWidget {
   const AllHomeGategroies({super.key});
@@ -14,46 +14,43 @@ class AllHomeGategroies extends StatelessWidget {
       runSpacing: 20.h,
       spacing: 10.w,
       direction: Axis.horizontal,
-      children: [
+      children: const[
         HomeCategory(
           categoryIcon: Assets.doctorConulationIcon,
           category: 'Consultaion',
-          onTap: () {
-            GoRouter.of(context).push(Routes.doctorConsultation);
-          },
+          routePage: Routes.doctorConsultation,
+        
         ),
         HomeCategory(
           categoryIcon: Assets.labIcon,
           category: 'Lab',
-          onTap: () {
-            GoRouter.of(context).push(Routes.eLab);
-          },
+          routePage: Routes.eLab,
+          
         ),
         HomeCategory(
           categoryIcon: Assets.pharmacyIcon,
           category: 'Pharmacy',
-          onTap: () {
-            GoRouter.of(context).push(Routes.ePharmacy);
-          },
+          routePage: Routes.ePharmacy,
+         
         ),
         HomeCategory(
           categoryIcon: Assets.homeVisitIcon,
           category: 'Home Visit',
-          onTap: () {},
+          routePage: "DD",
         ),
         HomeCategory(
           categoryIcon: Assets.bmiCalculatorIcon,
           category: 'Bmi Calculator',
           imageFlex: 6,
+          routePage: "DD",
           textFlex: 5,
-          onTap: () {},
         ),
         HomeCategory(
           categoryIcon: Assets.medicalQuestionIcon,
           category: 'Medical Quesitions',
           imageFlex: 6,
           textFlex: 5,
-          onTap: () {},
+          routePage: "DD",
         ),
       ],
     );
