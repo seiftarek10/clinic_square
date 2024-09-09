@@ -28,7 +28,7 @@ class _CardButtonState extends State<CardButton> {
           onTapUpColor: Colors.white,
           route: widget.routePage,
           child: Container(
-            padding: EdgeInsets.symmetric(vertical: 3.h, horizontal: 7.w),
+            padding: EdgeInsets.symmetric(vertical: 3.h, horizontal: 9.w),
             decoration: BoxDecoration(
                 gradient: AppColors.appGradient(5,_color),
                 borderRadius: BorderRadius.circular(50)),

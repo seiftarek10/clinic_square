@@ -1,10 +1,9 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
-import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
+import 'package:clinic_square/Core/Widgets/Buttons/card_button.dart';
 import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:go_router/go_router.dart';
 
 class ActivityCard extends StatelessWidget {
   const ActivityCard({super.key});
@@ -13,9 +12,7 @@ class ActivityCard extends StatelessWidget {
     return SizedBox(
         height: 125.h,
         width: 343.w,
-        child: Row(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          children: [
+        child: Row(crossAxisAlignment: CrossAxisAlignment.start, children: [
           Expanded(
               flex: 4,
               child: SizedBox(
@@ -44,16 +41,10 @@ class ActivityCard extends StatelessWidget {
                             .copyWith(overflow: TextOverflow.ellipsis)),
                     SizedBox(height: 4.h),
                     Text('2024 5 October', style: Fonts.font14_500DarkBlue),
-                    Align(
-                        alignment: Alignment.bottomRight,
-                        child: TextButton(
-                            onPressed: () {
-                              GoRouter.of(context)
-                                  .push(Routes.appoinmentDetails);
-                            },
-                            child: Text("View",
-                                style: Fonts.font14_400DarkBlue
-                                    .copyWith(color: AppColors.mainBlue))))
-                  ]))]));
+                    const CardButton(
+                        routePage: Routes.appoinmentDetails,
+                        buttonTitle: "View")
+                  ]))
+        ]));
   }
 }
