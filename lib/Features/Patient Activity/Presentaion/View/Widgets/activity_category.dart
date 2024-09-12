@@ -52,7 +52,7 @@ class _ActivityContainerCategoryState extends State<ActivityContainerCategory> {
               Expanded(
                   child: Padding(
                 padding: widget.needPhotoPadding == true
-                    ? const EdgeInsets.only(left: 6, bottom: 1)
+                    ? const EdgeInsets.only(left: 4)
                     : EdgeInsets.zero,
                 child: Image.asset(widget.cardPhoto, fit: BoxFit.cover),
               )),
