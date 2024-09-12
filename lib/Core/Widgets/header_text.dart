@@ -10,7 +10,7 @@ class HeaderText extends StatelessWidget {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        GradientText(title),
+        AppGradientText(title),
         Text(
           subTitle,
           style: Fonts.font14_300DarkBlue,

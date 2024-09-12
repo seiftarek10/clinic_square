@@ -4,9 +4,10 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ActivityCardListView extends StatelessWidget {
-  const ActivityCardListView({super.key, required this.route});
+  const ActivityCardListView({super.key, required this.route, this.isRouting});
 
   final String route;
+  final bool? isRouting;
 
   @override
   Widget build(BuildContext context) {
@@ -17,6 +18,7 @@ class ActivityCardListView extends StatelessWidget {
           return Padding(
               padding: EdgeInsets.symmetric(vertical: 8.h),
               child: ActivityCard(
+                isRouting: isRouting==null?null:true,
                 title: 'Dr Seif Tariq Maher',
                 subTitle: 'Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla Bla',
                 date: "2030 5 Octoper",
