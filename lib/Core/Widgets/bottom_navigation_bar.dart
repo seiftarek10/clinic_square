@@ -2,6 +2,7 @@ import 'package:clinic_square/Core/Themes/colors.dart';
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/patient_activity.dart';
 import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/patinet_profile.dart';
+import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
 
 class AppBottomBar extends StatefulWidget {
@@ -62,11 +63,11 @@ class _AppBottomBarState extends State<AppBottomBar> {
                     label: 'Home',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.message),
+                    icon: Icon(EvaIcons.messageCircle),
                     label: 'Forum',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.volunteer_activism),
+                    icon: Icon(Icons.volunteer_activism_rounded),
                     label: 'Activity',
                   ),
                   BottomNavigationBarItem(
