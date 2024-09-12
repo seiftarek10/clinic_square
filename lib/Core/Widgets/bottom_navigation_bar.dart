@@ -1,9 +1,12 @@
 import 'package:clinic_square/Core/Themes/colors.dart';
-import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/patient_activity.dart';
-import 'package:clinic_square/Features/Patient%20Profile/Presentaion/View/patinet_profile.dart';
+import 'package:clinic_square/Core/utils/assets.dart';
+import 'package:clinic_square/Features/Patient/Forum/Presentation/View/forum.dart';
+import 'package:clinic_square/Features/Patient/Home/Presentation/View/home.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/patient_activity.dart';
+import 'package:clinic_square/Features/Patient/Profile/Presentation/View/patinet_profile.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AppBottomBar extends StatefulWidget {
   const AppBottomBar({super.key});
@@ -16,10 +19,8 @@ class _AppBottomBarState extends State<AppBottomBar> {
   int _selectedIndex = 0;
 
   static final List<Widget> _pages = <Widget>[
-    const HomePage(),
-    const Center(
-      child: Text("Center"),
-    ),
+    const PatientHomePage(),
+    const ForumView(),
     const PatientActivityView(),
     const PatinetProfileView()
   ];
@@ -42,6 +43,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
           right: 20,
           left: 20,
           child: Container(
+            height: 70.h,
             decoration: BoxDecoration(
                 gradient: AppColors.appGradient(6),
                 borderRadius: BorderRadius.circular(70),
@@ -57,7 +59,7 @@ class _AppBottomBarState extends State<AppBottomBar> {
                 type: BottomNavigationBarType.fixed,
                 elevation: 0,
                 backgroundColor: Colors.transparent,
-                items: const <BottomNavigationBarItem>[
+                items: <BottomNavigationBarItem>[
                   BottomNavigationBarItem(
                     icon: Icon(Icons.home_filled),
                     label: 'Home',
@@ -71,14 +73,20 @@ class _AppBottomBarState extends State<AppBottomBar> {
                     label: 'Activity',
                   ),
                   BottomNavigationBarItem(
-                    icon: Icon(Icons.person),
+                    icon: Padding(
+                      padding: EdgeInsets.only(bottom: 2.h, top: 2.h),
+                      child: CircleAvatar(
+                          backgroundImage: AssetImage(Assets.doctorImageIcon),
+                          radius: _selectedIndex == 3 ? 20 : 18),
+                    ),
                     label: 'Profile',
                   ),
                 ],
                 currentIndex: _selectedIndex,
                 selectedItemColor: Colors.white,
                 selectedFontSize: 16,
-                selectedIconTheme: const IconThemeData(size: 30),
+                selectedIconTheme: const IconThemeData(size: 33),
+                unselectedIconTheme: const IconThemeData(size: 26),
                 unselectedItemColor: Colors.black,
                 onTap: _onItemTapped,
               ),

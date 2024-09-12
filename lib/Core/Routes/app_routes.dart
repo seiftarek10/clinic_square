@@ -7,20 +7,21 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_lab.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_pharmacy.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up/sign_up_as.dart';
-import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/book_appoinment.dart';
-import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctor_details.dart';
-import 'package:clinic_square/Features/Doctor%20Consultation/Presentaion/View/doctors_consultation.dart';
-import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab.dart';
-import 'package:clinic_square/Features/E-Lab/Presentaion/Views/elab_book_view.dart';
-import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy.dart';
-import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy_info.dart';
-import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Consultation/consultation_details.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Consultation/consultation_activity.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/e_lab_activities.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/e_lab_activity_details.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Pharmacy/e_pharmacy_activity.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/patient_activity.dart';
+import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/book_appoinment.dart';
+import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/doctor_details.dart';
+import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/doctors_consultation.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_book_view.dart';
+import 'package:clinic_square/Features/Patient/E-Pharmacy/Presentation/Views/e_pharmacy.dart';
+import 'package:clinic_square/Features/Patient/E-Pharmacy/Presentation/Views/e_pharmacy_info.dart';
+import 'package:clinic_square/Features/Patient/Forum/Presentation/View/forum.dart';
+import 'package:clinic_square/Features/Patient/Home/Presentation/View/home.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Consultation/consultation_details.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Consultation/consultation_activity.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Lab/e_lab_activities.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Lab/e_lab_activity_details.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Pharmacy/e_pharmacy_activity.dart';
+import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/patient_activity.dart';
 import 'package:go_router/go_router.dart';
 
 final appRouter = GoRouter(
@@ -56,9 +57,9 @@ final appRouter = GoRouter(
           slideTransitionPageBuilder(context, state, const SignInView()),
     ),
     GoRoute(
-      path: Routes.home,
+      path: Routes.patientHome,
       pageBuilder: (context, state) =>
-          slideTransitionPageBuilder(context, state, const HomePage()),
+          slideTransitionPageBuilder(context, state, const PatientHomePage()),
     ),
     GoRoute(
         path: Routes.doctorConsultation,
@@ -118,6 +119,9 @@ final appRouter = GoRouter(
         path: Routes.ePharmacyActivity,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
             context, state, const EPharmacyActivityView())),
-  
+     GoRoute(
+        path: Routes.forum,
+        pageBuilder: (context, state) => slideTransitionPageBuilder(
+            context, state, const ForumView())),
   ],
 );
