@@ -51,7 +51,7 @@ class ActivityCard extends StatelessWidget {
                     Text(maxLines: 1, date, style: Fonts.font14_500DarkBlue),
                     isRouting == null
                         ? CardButton(routePage: route, buttonTitle: "View")
-                        : MedicineInfoBottomSheet()
+                        : const MedicineInfoBottomSheet()
                   ]))
         ]));
   }
