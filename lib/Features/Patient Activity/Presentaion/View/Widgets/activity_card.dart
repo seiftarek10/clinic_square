@@ -1,5 +1,6 @@
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:clinic_square/Core/Widgets/Buttons/card_button.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/Widgets/medicin_info_bottom_sheet.dart';
 
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -11,8 +12,10 @@ class ActivityCard extends StatelessWidget {
       required this.subTitle,
       required this.date,
       required this.cardImage,
-      required this.route});
+      required this.route,
+      this.isRouting});
   final String title, subTitle, date, cardImage, route;
+  final bool? isRouting;
   @override
   Widget build(BuildContext context) {
     return SizedBox(
@@ -46,11 +49,12 @@ class ActivityCard extends StatelessWidget {
                             .copyWith(overflow: TextOverflow.ellipsis)),
                     SizedBox(height: 4.h),
                     Text(maxLines: 1, date, style: Fonts.font14_500DarkBlue),
-                     CardButton(
-                        routePage: route,
-                        buttonTitle: "View")
+                    isRouting == null
+                        ? CardButton(routePage: route, buttonTitle: "View")
+                        : MedicineInfoBottomSheet()
                   ]))
         ]));
   }
-
 }
+
+

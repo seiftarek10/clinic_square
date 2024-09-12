@@ -17,8 +17,9 @@ import 'package:clinic_square/Features/E-Pharmacy/Presentaion/Views/e_pharmacy_i
 import 'package:clinic_square/Features/Home/Presentaion/View/home.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Consultation/consultation_details.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Consultation/consultation_activity.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/lab_activities.dart';
-import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/lab_activity_details.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/e_lab_activities.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Lab/e_lab_activity_details.dart';
+import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/Pharmacy/e_pharmacy_activity.dart';
 import 'package:clinic_square/Features/Patient%20Activity/Presentaion/View/screens/patient_activity.dart';
 import 'package:go_router/go_router.dart';
 
@@ -106,12 +107,17 @@ final appRouter = GoRouter(
         pageBuilder: (context, state) => slideTransitionPageBuilder(
             context, state, const ConsultationDetailsView())),
     GoRoute(
-        path: Routes.labActivity,
+        path: Routes.elabActivity,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
-            context, state, const LabActivitiesView())),
+            context, state, const ELabActivitiesView())),
     GoRoute(
-        path: Routes.labActivityDetails,
+        path: Routes.elabActivityDetails,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
-            context, state, const LabActivityDetailsView())),
+            context, state, const ELabActivityDetailsView())),
+    GoRoute(
+        path: Routes.ePharmacyActivity,
+        pageBuilder: (context, state) => slideTransitionPageBuilder(
+            context, state, const EPharmacyActivityView())),
+  
   ],
 );

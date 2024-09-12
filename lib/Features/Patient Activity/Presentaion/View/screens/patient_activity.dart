@@ -27,13 +27,13 @@ class PatientActivityView extends StatelessWidget {
             needPhotoPadding: true,
             cardPhoto: Assets.labActivity,
             cardTitle: 'Laboratory',
-            routePage: Routes.labActivity,
+            routePage: Routes.elabActivity,
           ),
           Space.verticalSpace30,
           const ActivityContainerCategory(
             // needPhotoPadding: true,
             cardPhoto: Assets.pharmacyActivity, cardTitle: "Pharmacy",
-            routePage: 'fff',
+            routePage: Routes.ePharmacyActivity,
           )
         ],
       ),

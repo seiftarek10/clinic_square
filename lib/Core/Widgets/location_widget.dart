@@ -1,6 +1,5 @@
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class LocationWidget extends StatelessWidget {
   const LocationWidget({
@@ -23,7 +22,7 @@ class LocationWidget extends StatelessWidget {
             ),
           ),
         ),
-        SizedBox(width: 12.w),
+        const SizedBox(width: 12),
         Expanded(
           flex: 7,
           child: Text(location,

@@ -19,7 +19,7 @@ class DateWidget extends StatelessWidget {
             height: 37.h,
           ),
         ),
-        SizedBox(width: 12.w),
+        const SizedBox(width: 12),
         Expanded(
           flex: 7,
           child: Text(date, style: Fonts.font16_600DarkBlue)),

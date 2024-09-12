@@ -33,6 +33,8 @@ class AppTabBar extends StatelessWidget {
                  HeaderBar(headerText: pageTitle),
                 Space.verticalSpace24,
                 TabBar(
+                  enableFeedback:false ,
+                  overlayColor: const WidgetStatePropertyAll(Colors.transparent),
                     indicatorColor: AppColors.mainBlue,
                     indicatorSize: TabBarIndicatorSize.tab,
                     labelStyle: Fonts.font18_600DarkBlue
