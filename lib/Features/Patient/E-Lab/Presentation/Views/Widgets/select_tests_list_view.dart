@@ -1,17 +1,11 @@
 import 'package:clinic_square/Core/Helpers/space.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
-import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/Widgets/test.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/Widgets/tests.listview.dart';
 import 'package:flutter/material.dart';
 
-class SelectTests extends StatefulWidget {
+class SelectTests extends StatelessWidget {
   const SelectTests({super.key});
 
-  @override
-  State<SelectTests> createState() => _SelectTestsState();
-}
-
-class _SelectTestsState extends State<SelectTests> {
-  final Set<int> _selectedIndices = {};
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -28,25 +22,7 @@ class _SelectTestsState extends State<SelectTests> {
           ],
         ),
         Space.verticalSpace18,
-        ListView.builder(
-            shrinkWrap: true,
-            physics: const BouncingScrollPhysics(),
-            itemCount: 4,
-            itemBuilder: (BuildContext context, int index) {
-              bool selectedIndex = _selectedIndices.contains(index);
-              return Test(
-                onTap: () {
-                  setState(() {
-                    if (selectedIndex) {
-                      _selectedIndices.remove(index);
-                    } else {
-                      _selectedIndices.add(index);
-                    }
-                  });
-                },
-                isAdded: selectedIndex,
-              );
-            })
+        TestsListView()
       ],
     );
   }

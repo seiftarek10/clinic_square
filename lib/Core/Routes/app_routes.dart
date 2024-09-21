@@ -10,7 +10,7 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/book_appoinment.dart';
 import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/doctor_details.dart';
 import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/doctors_consultation.dart';
-import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_scan.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_book_view.dart';
 import 'package:clinic_square/Features/Patient/E-Pharmacy/Presentation/Views/e_pharmacy.dart';
 import 'package:clinic_square/Features/Patient/E-Pharmacy/Presentation/Views/e_pharmacy_info.dart';
@@ -77,7 +77,7 @@ final appRouter = GoRouter(
     GoRoute(
       path: Routes.eLab,
       pageBuilder: (context, state) =>
-          slideTransitionPageBuilder(context, state, const ElabView()),
+          slideTransitionPageBuilder(context, state, const ElabAndScansView()),
     ),
     GoRoute(
       path: Routes.eLabBookView,
@@ -119,9 +119,9 @@ final appRouter = GoRouter(
         path: Routes.ePharmacyActivity,
         pageBuilder: (context, state) => slideTransitionPageBuilder(
             context, state, const EPharmacyActivityView())),
-     GoRoute(
+    GoRoute(
         path: Routes.forum,
-        pageBuilder: (context, state) => slideTransitionPageBuilder(
-            context, state, const ForumView())),
+        pageBuilder: (context, state) =>
+            slideTransitionPageBuilder(context, state, const ForumView())),
   ],
 );

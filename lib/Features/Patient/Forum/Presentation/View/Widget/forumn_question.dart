@@ -31,7 +31,13 @@ class ForumQuestion extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Text(title, style: Fonts.font18_600DarkBlue),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: [
+                      Text(title, style: Fonts.font18_600DarkBlue),
+                      Text("3/10/2024",style: Fonts.font14_300DarkBlue,)
+                    ],
+                  ),
                   SizedBox(height: 2.h),
                   Text(
                       subTitle,
