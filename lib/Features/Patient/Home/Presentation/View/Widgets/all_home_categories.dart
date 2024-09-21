@@ -21,9 +21,9 @@ class AllHomeGategroies extends StatelessWidget {
           routePage: Routes.doctorConsultation,
         
         ),
-        HomeCategory(
+        HomeCategory( 
           categoryIcon: Assets.labIcon,
-          category: 'Lab',
+          category: 'Labs & Scans',
           routePage: Routes.eLab,
           
         ),

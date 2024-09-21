@@ -1,4 +1,3 @@
-
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/Widgets/elab_card.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -14,10 +13,7 @@ class ElabListView extends StatelessWidget {
       itemCount: 10,
       itemBuilder: (BuildContext context, int index) {
         return Padding(
-          padding: EdgeInsets.only(bottom: 12.h),
-          child: const ElabCard(
-            
-          ));
+            padding: EdgeInsets.only(bottom: 12.h), child: const ElabCard());
       },
     );
   }
