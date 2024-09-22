@@ -10,6 +10,7 @@ import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20up
 import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/book_appoinment.dart';
 import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/doctor_details.dart';
 import 'package:clinic_square/Features/Patient/Doctor%20Consultation/Presentation/View/doctors_consultation.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/View%20Models/Cubits/scans_reservation/scans_reservation_cubit.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_scan.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_book_view.dart';
 import 'package:clinic_square/Features/Patient/E-Pharmacy/Presentation/Views/e_pharmacy.dart';
@@ -22,7 +23,10 @@ import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screen
 import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Lab/e_lab_activity_details.dart';
 import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/Pharmacy/e_pharmacy_activity.dart';
 import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screens/patient_activity.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
+
+final scanCubit = ScansReservationCubit();
 
 final appRouter = GoRouter(
   routes: [
@@ -76,13 +80,23 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: Routes.eLab,
-      pageBuilder: (context, state) =>
-          slideTransitionPageBuilder(context, state, const ElabAndScansView()),
+      pageBuilder: (context, state) => slideTransitionPageBuilder(
+          context,
+          state,
+          BlocProvider(
+            create: (context) => scanCubit,
+            child: const ElabAndScansView(),
+          )),
     ),
     GoRoute(
       path: Routes.eLabBookView,
-      pageBuilder: (context, state) =>
-          slideTransitionPageBuilder(context, state, const ElabBookView()),
+      pageBuilder: (context, state) => slideTransitionPageBuilder(
+          context,
+          state,
+          BlocProvider.value(
+            value: scanCubit,
+            child: const ElabBookView(),
+          )),
     ),
     GoRoute(
       path: Routes.ePharmacy,

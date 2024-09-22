@@ -30,14 +30,23 @@ class _BookingListWidgetState extends State<BookingListWidget>
   }
 
   @override
+  void dispose() {
+    super.dispose();
+    _animationController.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
     return BlocConsumer<ScansReservationCubit, ScansReservationState>(
         listener: (context, state) {
       if (state is ModifyScansList) {
         if (state.scanLength == 0) {
           _animationController.reverse();
-        } else {
-          _animationController.forward();
+        } else if (state.scanLength == 1) {
+          if (_animationController.status.isForwardOrCompleted) {
+          } else {
+            _animationController.forward();
+          }
         }
       }
     }, builder: (context, state) {
@@ -48,13 +57,16 @@ class _BookingListWidgetState extends State<BookingListWidget>
             counter: state.scanLength,
           ),
           builder: (context, child) {
-            return Container(
-              padding: EdgeInsets.symmetric(horizontal: 16.w),
-              height: _animation.value,
-              decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(12),
-                  gradient: AppColors.appGradient(1)),
-              child: child,
+            return GestureDetector(
+              onTap: () {},
+              child: Container(
+                padding: EdgeInsets.symmetric(horizontal: 16.w),
+                height: _animation.value,
+                decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(12),
+                    gradient: AppColors.appGradient(1)),
+                child: child,
+              ),
             );
           },
         );
@@ -67,7 +79,6 @@ class _BookingListWidgetState extends State<BookingListWidget>
 
 class _AnimationChild extends StatelessWidget {
   const _AnimationChild({
-    super.key,
     required this.counter,
   });
   final int counter;
