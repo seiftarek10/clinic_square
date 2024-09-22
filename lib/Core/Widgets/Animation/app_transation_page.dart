@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-CustomTransitionPage<void> slideTransitionPageBuilder(BuildContext context, GoRouterState state, Widget child) {
+CustomTransitionPage<void> slideTransitionPageBuilder(
+  BuildContext context,
+  GoRouterState state,
+  Widget child,
+) {
   return CustomTransitionPage<void>(
     key: state.pageKey,
     child: child,
