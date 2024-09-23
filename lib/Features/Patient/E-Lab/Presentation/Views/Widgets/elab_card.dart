@@ -2,14 +2,20 @@ import 'package:clinic_square/Core/Routes/routes_path_key.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
 import 'package:clinic_square/Core/Widgets/Buttons/card_button.dart';
 import 'package:clinic_square/Core/utils/assets.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/View%20Models/Cubits/scans_reservation/scans_reservation_cubit.dart';
+import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_book_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ElabCard extends StatelessWidget {
-  const ElabCard({super.key});
+  const ElabCard({super.key, required this.scansReservationCubit});
+
+  final ScansReservationCubit scansReservationCubit;
 
   @override
   Widget build(BuildContext context) {
+    var test = BlocProvider.of<ScansReservationCubit>(context);
     return SizedBox(
       height: 110.h,
       width: 343.w,
@@ -44,9 +50,21 @@ class ElabCard extends StatelessWidget {
                       maxLines: 2,
                       style: Fonts.font14_300DarkBlue
                           .copyWith(overflow: TextOverflow.ellipsis)),
-                  const CardButton(
-                    routePage: Routes.eLabBookView,
-                    buttonTitle: 'Book')
+                  // const CardButton(
+                  //   routePage: Routes.eLabBookView,
+                  //   buttonTitle: 'Book')
+                  TextButton(
+                    onPressed: () {
+                      Navigator.push(
+                          context,
+                          MaterialPageRoute(
+                              builder: (context) => BlocProvider.value(
+                                    value: scansReservationCubit,
+                                    child: const ElabBookView(),
+                                  )));
+                    },
+                    child: Text('View'),
+                  )
                 ],
               ))
         ],
