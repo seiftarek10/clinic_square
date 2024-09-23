@@ -1,10 +1,8 @@
 import 'package:clinic_square/Core/Widgets/app_tab_bar.dart';
-import 'package:clinic_square/Features/Patient/E-Lab/Presentation/View%20Models/Cubits/scans_reservation/scans_reservation_cubit.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/Widgets/booking_list.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/Widgets/elabs_tab.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/Widgets/scans_tab.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
 
 class ElabAndScansView extends StatefulWidget {
   const ElabAndScansView({super.key});

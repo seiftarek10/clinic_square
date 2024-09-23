@@ -1,6 +1,4 @@
-import 'package:clinic_square/Core/Routes/routes_path_key.dart';
 import 'package:clinic_square/Core/Themes/fonts.dart';
-import 'package:clinic_square/Core/Widgets/Buttons/card_button.dart';
 import 'package:clinic_square/Core/utils/assets.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/View%20Models/Cubits/scans_reservation/scans_reservation_cubit.dart';
 import 'package:clinic_square/Features/Patient/E-Lab/Presentation/Views/elab_book_view.dart';
@@ -15,7 +13,6 @@ class ElabCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    var test = BlocProvider.of<ScansReservationCubit>(context);
     return SizedBox(
       height: 110.h,
       width: 343.w,
