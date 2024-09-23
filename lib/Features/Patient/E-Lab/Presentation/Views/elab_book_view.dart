@@ -11,7 +11,6 @@ import 'package:flutter/material.dart';
 
 class ElabBookView extends StatelessWidget {
   const ElabBookView({super.key});
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -38,7 +37,7 @@ class ElabBookView extends StatelessWidget {
             bottom: 7,
             right: 8,
             left: 8,
-            child:BookingListWidget(),
+            child: BookingListWidget(),
           ),
         ],
       ),
