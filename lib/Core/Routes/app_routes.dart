@@ -1,4 +1,5 @@
 import 'package:clinic_square/Core/Routes/routes_path_key.dart';
+import 'package:clinic_square/Core/Utils/service_locator.dart';
 import 'package:clinic_square/Core/Widgets/Animation/app_transation_page.dart';
 import 'package:clinic_square/Core/Widgets/bottom_navigation_bar.dart';
 import 'package:clinic_square/Features/Authentication/Prsenetaion/View/Sign%20In/sign_in.dart';
@@ -26,7 +27,7 @@ import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screen
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-final scanCubit = ScansReservationCubit();
+
 
 final appRouter = GoRouter(
   routes: [
@@ -84,7 +85,7 @@ final appRouter = GoRouter(
           context,
           state,
           BlocProvider(
-            create: (context) => scanCubit,
+            create: (context) => getit.get<ScansReservationCubit>(),
             child: const ElabAndScansView(),
           )),
     ),
@@ -93,8 +94,8 @@ final appRouter = GoRouter(
       pageBuilder: (context, state) => slideTransitionPageBuilder(
           context,
           state,
-          BlocProvider.value(
-            value: scanCubit,
+          BlocProvider(
+           create: (context) => getit.get<ScansReservationCubit>(),
             child: const ElabBookView(),
           )),
     ),
