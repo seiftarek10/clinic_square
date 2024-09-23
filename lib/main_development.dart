@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
 void main() {
-  runApp(const ClinicSquare());
   serviceLocatorSetup();
+  runApp(const ClinicSquare());
   Bloc.observer = AppBlocObserver();
 }

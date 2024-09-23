@@ -7,16 +7,18 @@ class ScansReservationCubit extends Cubit<ScansReservationState> {
 
   void inCrement() {
     scanLength++;
-    emit(ModifyScansList(
-      scanLength: scanLength
-    ));
+    print(scanLength);
+    emit(ModifyScansList(scanLength: scanLength));
   }
 
-   void deCrement() {
+  void deCrement() {
     scanLength--;
-    emit(ModifyScansList(
-      scanLength: scanLength
+    print(scanLength);
 
-    ));
+    emit(ModifyScansList(scanLength: scanLength));
+  }
+
+  void closCubit() {
+    close();
   }
 }

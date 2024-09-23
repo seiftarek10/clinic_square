@@ -27,8 +27,6 @@ import 'package:clinic_square/Features/Patient/Activity/Presentation/View/screen
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:go_router/go_router.dart';
 
-
-
 final appRouter = GoRouter(
   routes: [
     GoRoute(path: '/', builder: (context, state) => const AppBottomBar()),
@@ -91,13 +89,14 @@ final appRouter = GoRouter(
     ),
     GoRoute(
       path: Routes.eLabBookView,
-      pageBuilder: (context, state) => slideTransitionPageBuilder(
-          context,
-          state,
-          BlocProvider(
-           create: (context) => getit.get<ScansReservationCubit>(),
-            child: const ElabBookView(),
-          )),
+      // pageBuilder: (context, state) => BlocProvider(
+      //   create: (context) => SubjectBloc(),
+      //   child: slideTransitionPageBuilder(context, state, const ElabBookView()),
+      builder: (context,state)=>BlocProvider.value(
+         value: BlocProvider.of<ScansReservationCubit>(context),
+         child: const ElabBookView(),
+         )
+      // ),
     ),
     GoRoute(
       path: Routes.ePharmacy,
